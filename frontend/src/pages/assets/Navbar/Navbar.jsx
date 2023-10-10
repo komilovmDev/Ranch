@@ -1,6 +1,8 @@
 import './Navbar.css';
-import logo from './../IMG/Ranch.png'
-import { AiOutlineSearch } from 'react-icons/ai'
+import phone from './../IMG/Vector.png';
+import email from './../IMG/Component.png';
+import logo from './../IMG/Ranch.png';
+import {AiOutlineSearch} from 'react-icons/ai';
 
 export default function Navbar() {
     return (
@@ -11,15 +13,15 @@ export default function Navbar() {
                     <button> Murojat uchun </button>
                 </div>
                 <div className="LabInp">
-                    <label htmlFor=""><input type="search" /> <button type='submit'><AiOutlineSearch /> </button></label>
+                    <label htmlFor=""><input type="search" /> <button type='submit'><AiOutlineSearch /></button></label>
                 </div>
                 <div className='TelEmail'>
                     <div className="Tel">
-                        <img src="" alt="" />
+                        <img src={phone} alt="" />
                         <p>62 227 77 72</p>
                     </div>
                     <div className="Email">
-                        <img src="" alt="" />
+                        <img src={email} alt="" />
                         <p>university@utu-ranch.uz</p>
                     </div>
                 </div>
