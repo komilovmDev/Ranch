@@ -1,7 +1,7 @@
 import './Navbar.css';
-import phone from './../IMG/Vector.png';
-import email from './../IMG/Component.png';
-import logo from './../IMG/Ranch.png';
+import phone from './../../pages/assets/IMG/Vector.png';
+import email from './../../pages/assets/IMG/Component.png';
+import logo from './../../pages/assets/IMG/Ranch.png';
 import {AiOutlineSearch} from 'react-icons/ai';
 
 export default function Navbar() {
