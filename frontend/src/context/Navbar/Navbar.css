@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
 .Navbar {
     width: 100%;
     display: flex;
@@ -10,7 +12,7 @@
     height: auto;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 0.5vw;
     padding: 1vw 0;
 }
 
@@ -25,6 +27,9 @@
 }
 
 .LogBut button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 7.6vw;
     height: 2vw;
     padding: .4vw .8vw;
@@ -32,13 +37,14 @@
     border: none;
     border-radius: .3vw;
     color: #F6F8F9;
-    font-family: Montserrat;
+    font-family: 'Montserrat', sans-serif;
     font-size: .72vw;
     font-style: normal;
     font-weight: 600;
     line-height: 1.25vw;
-    border: .1vw solid;
+    border: .1vw solid #FF6400;
     transition: .3s all ease;
+    cursor: pointer;
 }
 
 .LogBut button:hover{
@@ -49,16 +55,24 @@
 
 .TelEmail {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.56vw;
+    color: #3E3E3E;
+    font-size: .7vw;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .Tel {
     display: flex;
     align-items: center;
+    gap: .3vw;
 }
 
 .Email {
     display: flex;
     align-items: center;
+    gap: .3vw;
 }
 
 .LabInp {
@@ -74,6 +88,8 @@
     padding: .21vw .83vw;
     border-radius: .3vw;
     background-color: #F5F7FA;
+    display:flex ;
+    justify-content: space-between;
 }
 
 .LabInp label input {
@@ -83,4 +99,49 @@
     outline: none;
     border: none;
     font-size: .72vw;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.LabInp label button{
+    outline: none;
+    border: none;
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1vw;
+    color: #B0BABF;
+    cursor: pointer;
+}
+
+.ButLang {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ButLang button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2vw;
+    padding: .4vw .8vw;
+    background-color: #FF6400;
+    border: none;
+    border-radius: .3vw;
+    color: #F6F8F9;
+    font-family: 'Montserrat', sans-serif;
+    font-size: .72vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.25vw;
+    border: .1vw solid #FF6400;
+    transition: .3s all ease;
+    cursor: pointer;
+}
+
+.ButLang button:hover {
+    background-color: #F6F8F9;
+    color: #FF6400;
+    border: .1vw solid #FF6400;
 }
