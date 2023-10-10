@@ -36,7 +36,6 @@ export default function Navbar() {
                     <button>
                         Kirish
                     </button>
-                    <Home/>
                 </div>
             </div>
             <div className="NavDown">
