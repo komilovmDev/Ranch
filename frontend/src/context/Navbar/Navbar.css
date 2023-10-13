@@ -8,9 +8,10 @@
 }
 
 .NavUp {
-  width: 65vw;
+  width: 70vw;
   height: auto;
   display: flex;
+  justify-content: center;
   align-items: center;
   gap: 0.5vw;
   padding: 1vw 0;
@@ -231,4 +232,8 @@
     background: none;
     outline: none;
     
+}
+
+.buttonImg{
+    width: 100%;
 }
