@@ -8,7 +8,7 @@
 }
 
 .NavUp {
-    width: 65vw;
+    width: 70vw;
     height: auto;
     display: flex;
     align-items: center;
@@ -144,4 +144,17 @@
     background-color: #F6F8F9;
     color: #FF6400;
     border: .1vw solid #FF6400;
+}
+
+.ButLang {
+    display: flex;
+    gap: .3vw;
+}
+
+.ButLang select {
+    width: 3vw;
+    border: none;
+    background: none;
+    outline: none;
+    
 }
