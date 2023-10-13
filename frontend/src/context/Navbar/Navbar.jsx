@@ -3,9 +3,10 @@ import phone from './../../pages/assets/IMG/Vector.png';
 import email from './../../pages/assets/IMG/Component.png';
 import logo from './../../pages/assets/IMG/Ranch.png';
 import { AiOutlineSearch } from 'react-icons/ai';
+import imgUZ from '../../pages/assets/IMG/Flags.png';
+
 
 export default function Navbar() {
-
     return (
         <div className='Navbar'>
             <div className="NavUp">
@@ -36,74 +37,8 @@ export default function Navbar() {
                 </div>
             </div>
             <div className="NavDown">
-                <div className="dropdown">
-                    <button className="dropbtn">Yangiliklar</button>
-                </div>
-                <div className="dropdown">
-                    <button className="dropbtn">Universitet</button>
-                    <div className="dropdown-content">
-                        <a href="#">Link 1</a>
-                        <a href="#">Link 2</a>
-                        <a href="#">Link 3</a>
-                    </div>
-                </div>
-                <div className="dropdown">
-                    <button className="dropbtn">Faoliyat</button>
-                    <div className="dropdown-content">
-                        <a href="#">Link 1</a>
-                        <a href="#">Link 2</a>
-                        <a href="#">Link 3</a>
-                    </div>
-                </div>
-                <div className="dropdown">
-                    <button className="dropbtn">Abiturent</button>
-                    <div className="dropdown-content">
-                        <a href="#">Link 1</a>
-                        <a href="#">Link 2</a>
-                        <a href="#">Link 3</a>
-                    </div>
-                </div>
-                <div className="dropdown">
-                    <button className="dropbtn">Talabalar</button>
-                    <div className="dropdown-content">
-                        <a href="#">Link 1</a>
-                        <a href="#">Link 2</a>
-                        <a href="#">Link 3</a>
-                    </div>
-                </div>
-                <div className="dropdown">
-                    <button className="dropbtn">Magistratura</button>
-                    <div className="dropdown-content">
-                        <a href="#">Link 1</a>
-                        <a href="#">Link 2</a>
-                        <a href="#">Link 3</a>
-                    </div>
-                </div>
-                <div className="dropdown">
-                    <button className="dropbtn">Ta’lim resurslari</button>
-                    <div className="dropdown-content">
-                        <a href="#">Link 1</a>
-                        <a href="#">Link 2</a>
-                        <a href="#">Link 3</a>
-                    </div>
-                </div>
-                <div className="dropdown">
-                    <button className="dropbtn">Galereya</button>
-                    <div className="dropdown-content">
-                        <a href="#">Link 1</a>
-                        <a href="#">Link 2</a>
-                        <a href="#">Link 3</a>
-                    </div>
-                </div>
-                <div className="dropdown">
-                    <button className="dropbtn">Bizning Imkoniyatlarimiz</button>
-                    <div className="dropdown-content">
-                        <a href="#">Link 1</a>
-                        <a href="#">Link 2</a>
-                        <a href="#">Link 3</a>
-                    </div>
+
                 </div>
             </div>
-        </div>
     )
 }

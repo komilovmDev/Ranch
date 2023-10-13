@@ -219,3 +219,16 @@
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
+.ButLang {
+    display: flex;
+    gap: .3vw;
+}
+
+.ButLang select {
+    width: 3vw;
+    border: none;
+    background: none;
+    outline: none;
+    
+}
