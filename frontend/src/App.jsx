@@ -1,4 +1,5 @@
 import './App.css'
+import Footer from './context/Footer/Footer'
 import Navbar from './context/Navbar/Navbar'
 
 function App() {
@@ -6,6 +7,7 @@ function App() {
   return (
     <>  
       <Navbar/>
+      <Footer/>
     </>
   )
 }

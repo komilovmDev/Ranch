@@ -31,7 +31,7 @@ export default function Navbar() {
                     <button>
                         Kirish
                     </button>
-                    <select name="" id="">
+                    <select name="lang" id="lang">
                         <option value="en"><button>UZ</button></option>
                         <option value="en"><button>RU</button></option>
                         <option value="en"><button>EN</button></option>
