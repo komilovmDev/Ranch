@@ -2,6 +2,31 @@
 
 .Navbar {
   width: 100%;
+  top: 0;
+}
+
+.fixed {
+  background-color: #fff; 
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0; 
+  z-index: 2;
+  animation: animfixed .8s;
+}
+
+@keyframes animfixed {
+  0% {
+    transform: translateY(-100px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.NavContainer {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -172,6 +197,8 @@
 .NavDown {
   display: flex;
   gap: 1.1vw;
+  position: relative;
+  z-index: 2;
 }
 
 
@@ -185,7 +212,8 @@
   font-style: normal;
   font-weight: 600;
   font-family: "Montserrat", sans-serif;
-  padding-bottom: 0.3vw;
+  padding-bottom: .3vw;
+  border-bottom: 0.1vw solid white;
 }
 
 .dropbtn:hover,
@@ -202,14 +230,14 @@
   display: none;
   position: absolute;
   background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  min-width: 8.33vw;
+  box-shadow: 0px .41vw .8vw 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
 .dropdown-content a {
   color: black;
-  padding: 12px 16px;
+  padding: 1vw 1vw;
   text-decoration: none;
   display: block;
 }

@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+.Sviper {
+    margin-top: 1.19vw;
+    width: 100%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.SviperSwiper {
+    width: 70vw;
+    height: 26vw;
+    display: flex; 
+    border-radius: 1vw;
+    overflow: hidden;
+}
+
+.swiper {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    overflow: clip;
+    list-style: none;
+    padding: 0;
+    display: block;
+}
+
+.SliderImgBox {
+    width: 70vw;
+    height: 26vw;
+}
+
+.SliderImgBox img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.BlankBegBox {
+    margin-top: -1.5vw;
+    position: relative; 
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 2vw;
+    font-size: .78vw;
+    font-family: "Montserrat", sans-serif;
+    color: #fff;
+    font-weight: 600;
+    background-color: #FF6400;
+    letter-spacing: .1vw;
+}
