@@ -20,7 +20,8 @@ export default function Hamkor() {
                         slidesPerView={8}
                         spaceBetween={0}
                         centeredSlides={true}
-                        autoplay={{ 
+                        autoplay={{
+                            delay: 10000,
                             disableOnInteraction: false,
                         }}
                         loop={true}
