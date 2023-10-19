@@ -4,7 +4,7 @@ import email from './../../pages/assets/IMG/Component.png';
 import logo from './../../pages/assets/IMG/Ranch.png';
 import { AiOutlineSearch } from 'react-icons/ai';
 import { useEffect } from "react";
-import { useContext, useState } from "react";
+import { useState } from "react";
 
 
 export default function Navbar() {

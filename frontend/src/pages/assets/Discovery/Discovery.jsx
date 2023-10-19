@@ -2,9 +2,9 @@ import './Discovery.css';
 import zvezda from './../IMG/zvezda.png';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css/pagination';
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import { Autoplay, Navigation } from 'swiper/modules';
 import 'swiper/css';
-import Zdanie from './../IMG/Ranch_Zdanie.png'
+import Zdanie from './../IMG/Ranch_Zdanie.png';
 import { Link } from "react-router-dom";
 
 export default function Discovery() {
@@ -28,7 +28,7 @@ export default function Discovery() {
                     <div className="DiscoverySwiper"> 
                                     <Swiper className="DiscoverySwiper"
                                         slidesPerView={3}
-                                        spaceBetween={-120}
+                                        spaceBetween={-100}
                                         centeredSlides={true}
                                         autoplay={{
                                             delay: 10000,

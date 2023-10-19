@@ -2,6 +2,7 @@ import './Home.css'
 import Sviper from '../../context/Swiper/Sviper';
 import Yangiliklar from '../assets/Yangiliklar/Yangi';
 import Discovery from '../assets/Discovery/Discovery'; 
+import Count from '../assets/Count/Count';
 
 export default function Home() {
     return (
@@ -15,9 +16,9 @@ export default function Home() {
             <div className="Discovery">
                 <Discovery/>
             </div>
-            {/* <div className="Count">
+            <div className="Count">
                 <Count/>
-            </div> */}
+            </div>
         </div>
     )
 }
