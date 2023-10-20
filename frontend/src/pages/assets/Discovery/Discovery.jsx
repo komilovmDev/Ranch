@@ -28,11 +28,10 @@ export default function Discovery() {
                     <div className="DiscoverySwiper"> 
                                     <Swiper className="DiscoverySwiper"
                                         slidesPerView={3}
-                                        spaceBetween={-100}
+                                        spaceBetween={0}
                                         centeredSlides={true}
                                         autoplay={{
-                                            delay: 10000,
-                                            disableOnInteraction: false,
+                                            delay: 1000000, 
                                         }}
                                         loop={true}
                                         modules={[Autoplay, Navigation]}

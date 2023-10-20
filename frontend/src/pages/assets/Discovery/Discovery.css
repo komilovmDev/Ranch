@@ -44,6 +44,11 @@
     line-height: normal;
 }
 
+.DiscoveryHref a img {
+    width: .83vw;
+    height: .83vw;
+}
+
 .DiscoveryHref a button {
     outline: none;
     border: none;

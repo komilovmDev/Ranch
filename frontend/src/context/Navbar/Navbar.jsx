@@ -3,12 +3,14 @@ import phone from './../../pages/assets/IMG/Vector.png';
 import email from './../../pages/assets/IMG/Component.png';
 import logo from './../../pages/assets/IMG/Ranch.png';
 import { AiOutlineSearch } from 'react-icons/ai';
+import { AiOutlineCheck } from 'react-icons/ai';
 import { useEffect } from "react";
 import { useState } from "react";
+import { Link } from 'react-router-dom';
 
 
 export default function Navbar() {
-
+    //Navbar Fixed
     const [navClass, setNavClass] = useState('Navbar__Container');
 
     function FixedNav() {
@@ -67,18 +69,23 @@ export default function Navbar() {
                     </div>
                     <div className="dropdown">
                         <button className="dropbtn">Universitet</button>
-                        <div className="dropdown-content">
-                            <a href="#">Link 1</a>
-                            <a href="#">Link 2</a>
-                            <a href="#">Link 3</a>
+                        <div className="dropdown-content" >
+                            <Link><div className='LinkBox'><p>Markaz va bo'limlar</p> <button className='ButtonChek'><AiOutlineCheck /></button></div></Link>
+                            <Link><div className='LinkBox'><p>Kafedralar</p> <button className='ButtonChek'><AiOutlineCheck /></button></div></Link>
+                            <Link><div className='LinkBox'><p>Rektorat</p> <button className='ButtonChek'><AiOutlineCheck /></button></div></Link>
+                            <Link><div className='LinkBox'><p>Universitet Ichki tartib qoidalari</p> <button className='ButtonChek'><AiOutlineCheck /></button></div></Link>
+                            <Link><div className='LinkBox'><p>Universitet Odob-axloq kodeksi</p> <button className='ButtonChek'><AiOutlineCheck /></button></div></Link>
+                            <Link><div className='LinkBox'><p>Universitet nizomi</p> <button className='ButtonChek'><AiOutlineCheck /></button></div></Link>
+                            <Link><div className='LinkBox'><p>Universtitet haqida</p> <button className='ButtonChek'><AiOutlineCheck /></button></div></Link>
+                            <Link><div className='LinkBox'><p>Ochiq ma'lumot</p> <button className='ButtonChek'><AiOutlineCheck /></button></div></Link>
                         </div>
                     </div>
                     <div className="dropdown">
                         <button className="dropbtn">Faoliyat</button>
                         <div className="dropdown-content">
-                            <a href="#">Link 1</a>
-                            <a href="#">Link 2</a>
-                            <a href="#">Link 3</a>
+                            <Link><div className='LinkBox'><p>Xalqaro hamkor tashkilotlar</p> <button className='ButtonChek'><AiOutlineCheck /></button></div></Link>
+                            <Link><div className='LinkBox'><p>Yoshlar bilan ishlash va
+                                ma'naviy-ma'rifiy faoliyat</p> <button className='ButtonChek'><AiOutlineCheck /></button></div></Link>
                         </div>
                     </div>
                     <div className="dropdown">

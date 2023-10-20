@@ -3,6 +3,7 @@
 .Navbar {
   width: 100%;
   top: 0;
+
 }
 
 .fixed {
@@ -227,28 +228,35 @@
 }
 
 .dropdown-content {
+  width: 16.66vw;
+  height: auto;
   display: none;
   position: absolute;
-  background-color: #f1f1f1;
-  min-width: 8.33vw;
-  box-shadow: 0px .41vw .8vw 0px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  border: 1px solid var(--gray-100, #F2F4F7);
+  background: var(--White, #FFF);
+  box-shadow: 0px 4px 6px -2px rgba(16, 24, 40, 0.03), 0px 12px 16px -4px rgba(16, 24, 40, 0.08);
+  padding: .5vw .72vw;
   z-index: 1;
 }
 
 .dropdown-content a {
-  color: black;
-  padding: 1vw 1vw;
+  width: 100%;
+  height: auto;
+  color: var(--gray-900, #101828);
   text-decoration: none;
-  display: block;
+  display: flex;
 }
 
-.dropdown-content a:hover,
-.dropdown-content a:focus {
-  background-color: #ddd;
+.dropdown-content a:hover .ButtonChek{
+  display: flex;
+ 
 }
 
 .dropdown:hover .dropdown-content {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  gap: .41vw;
 }
 
 .ButLang {
@@ -273,4 +281,27 @@
   cursor: pointer;
   font-size: 1vw;
   width: 3.64vw;
+}
+
+.dropdown-content a .ButtonChek{
+  outline: none;
+  border: none;
+  background: none;
+  color: #FF6400;
+  font-size: 1vw;
+  display: none;
+}
+
+.LinkBox {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 1.8vw; 
+  font-size: .83vw;
+  font-family: "Montserrat", sans-serif;
+}
+
+.LinkBox p {
+  margin: 0;
+  padding: 0;
 }
