@@ -1,10 +1,10 @@
 import './Footer.css';
-import WhiteRanch from './../../pages/assets/IMG/Ranch_White.png';
+import WhiteRanch from './../../pages/Home/HomeAssets/IMG/Ranch_White.png';
 import { Link } from "react-router-dom";
-import facebook from '../../pages/assets/IMG/facebook.svg';
-import youtube from '../../pages/assets/IMG/youtube.svg';
-import telegram from '../../pages/assets/IMG/telegram.svg';
-import insta from '../../pages/assets/IMG/insta.svg'
+import facebook from '../../pages/Home/HomeAssets/IMG/facebook.svg';
+import youtube from '../../pages/Home/HomeAssets/IMG/youtube.svg';
+import telegram from '../../pages/Home/HomeAssets/IMG/telegram.svg';
+import insta from '../../pages/Home/HomeAssets/IMG/insta.svg'
 
 export default function Footer() {
     return (

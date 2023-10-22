@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css/pagination';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css';
-import Zdanie from './../../pages/assets/IMG/Ranch_Zdanie.png'
+import Zdanie from './../../pages/Home/HomeAssets/IMG/Ranch_Zdanie.png'
 
 
 export default function Sviper() {

@@ -1,9 +1,9 @@
 import './Home.css'  
 import Sviper from '../../context/Swiper/Sviper';
-import Yangiliklar from '../assets/Yangiliklar/Yangi';
-import Discovery from '../assets/Discovery/Discovery'; 
-import Count from '../assets/Count/Count';
-import Hamkor from '../assets/Hamkor/Hamkor';
+import Yangiliklar from './HomeAssets/Yangiliklar/Yangi';
+import Discovery from './HomeAssets/Discovery/Discovery'; 
+import Count from './HomeAssets/Count/Count';
+import Hamkor from './HomeAssets/Hamkor/Hamkor';
 
 export default function Home() {
     return (

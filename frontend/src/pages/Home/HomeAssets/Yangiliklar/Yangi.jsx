@@ -1,10 +1,10 @@
  
 import { Link } from "react-router-dom";
 import './Yangi.css';
-import risone from './../../assets/image/pic1 1.png';
-import risotwo from './../../assets/image/pic1 1.png';
-import risthree from './../../assets/image/pic1 1.png';
-import risfour from './../../assets/image/pic1 1.png';
+import risone from './../image/pic1 1.png';
+import risotwo from './../image/pic1 1.png';
+import risthree from './../image/pic1 1.png';
+import risfour from './../image/pic1 1.png';
 import { LuMoveRight } from 'react-icons/lu';
 
 

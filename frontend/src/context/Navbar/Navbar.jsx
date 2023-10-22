@@ -1,7 +1,7 @@
 import './Navbar.css';
-import phone from './../../pages/assets/IMG/Vector.png';
-import email from './../../pages/assets/IMG/Component.png';
-import logo from './../../pages/assets/IMG/Ranch.png';
+import phone from './../../pages/Home/HomeAssets/IMG/Vector.png';
+import email from './../../pages/Home/HomeAssets/IMG/Component.png';
+import logo from './../../pages/Home/HomeAssets/IMG/Ranch.png';
 import { AiOutlineSearch } from 'react-icons/ai';
 import { AiOutlineCheck } from 'react-icons/ai';
 import { useEffect } from "react";
@@ -32,7 +32,7 @@ export default function Navbar() {
 
 
     return (
-        <div className={navClass} >
+        <div className={navClass} id='Navbar' >
             <div className="NavContainer">
                 <div className="NavUp">
                     <div className="LogBut">
@@ -65,7 +65,7 @@ export default function Navbar() {
                 </div>
                 <div className="NavDown">
                     <div className="dropdown">
-                        <button className="dropbtn">Yangiliklar</button>
+                        <Link to={'/News'}><button className="dropbtn">Yangiliklar</button></Link>
                     </div>
                     <div className="dropdown">
                         <button className="dropbtn">Universitet</button>
