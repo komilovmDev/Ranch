@@ -31,6 +31,11 @@
     color: #3E3E3E;
 }
 
+.NewsTitleLine p {
+    color: #3E3E3E;
+    font-size: .833vw;
+}
+
 .NewsTitleLineText {
     color: #FF6400;
     font-weight: 600;

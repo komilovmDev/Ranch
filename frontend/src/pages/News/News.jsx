@@ -15,7 +15,7 @@ export default function News() {
                     <AiOutlineRight />
                 </div>
                 <div className="NewsBloks">
-                    <Link >
+                    <Link to={'/New'}>
                         <div className="NewsBlok">
                             <div className="NewsBlokImg">
                                 <img src={pic1} alt="" />
@@ -26,7 +26,7 @@ export default function News() {
                             </div>
                         </div>
                     </Link>
-                    <Link >
+                    <Link to={'/New'}>
                         <div className="NewsBlok">
                             <div className="NewsBlokImg">
                                 <img src={pic1} alt="" />
@@ -37,7 +37,7 @@ export default function News() {
                             </div>
                         </div>
                     </Link>
-                    <Link >
+                    <Link to={'/New'}>
                         <div className="NewsBlok">
                             <div className="NewsBlokImg">
                                 <img src={pic1} alt="" />
@@ -48,7 +48,7 @@ export default function News() {
                             </div>
                         </div>
                     </Link>
-                    <Link >
+                    <Link to={'/New'}>
                         <div className="NewsBlok">
                             <div className="NewsBlokImg">
                                 <img src={pic1} alt="" />
@@ -59,7 +59,7 @@ export default function News() {
                             </div>
                         </div>
                     </Link>
-                    <Link >
+                    <Link to={'/New'}>
                         <div className="NewsBlok">
                             <div className="NewsBlokImg">
                                 <img src={pic1} alt="" />
@@ -70,7 +70,7 @@ export default function News() {
                             </div>
                         </div>
                     </Link>
-                    <Link >
+                    <Link to={'/New'}>
                         <div className="NewsBlok">
                             <div className="NewsBlokImg">
                                 <img src={pic1} alt="" />
