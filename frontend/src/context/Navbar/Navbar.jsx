@@ -70,10 +70,10 @@ export default function Navbar() {
                     <div className="dropdown">
                         <button className="dropbtn">Universitet</button>
                         <div className="dropdown-content" >
-                            <Link><div className='LinkBox'><p>Markaz va bo'limlar</p> <button className='ButtonChek'><AiOutlineCheck /></button></div></Link>
-                            <Link><div className='LinkBox'><p>Kafedralar</p> <button className='ButtonChek'><AiOutlineCheck /></button></div></Link>
+                            <Link to={'/University/Markaz'}><div className='LinkBox'><p>Markaz va bo'limlar</p> <button className='ButtonChek'><AiOutlineCheck /></button></div></Link>
+                            <Link to={'/University/Kafedra'}><div className='LinkBox'><p>Kafedralar</p> <button className='ButtonChek'><AiOutlineCheck /></button></div></Link>
                             <Link><div className='LinkBox'><p>Rektorat</p> <button className='ButtonChek'><AiOutlineCheck /></button></div></Link>
-                            <Link><div className='LinkBox'><p>Universitet Ichki tartib qoidalari</p> <button className='ButtonChek'><AiOutlineCheck /></button></div></Link>
+                            <Link to={'/University/IchqiTartib'}><div className='LinkBox'><p>Universitet Ichki tartib qoidalari</p> <button className='ButtonChek'><AiOutlineCheck /></button></div></Link>
                             <Link><div className='LinkBox'><p>Universitet Odob-axloq kodeksi</p> <button className='ButtonChek'><AiOutlineCheck /></button></div></Link>
                             <Link><div className='LinkBox'><p>Universitet nizomi</p> <button className='ButtonChek'><AiOutlineCheck /></button></div></Link>
                             <Link><div className='LinkBox'><p>Universtitet haqida</p> <button className='ButtonChek'><AiOutlineCheck /></button></div></Link>
