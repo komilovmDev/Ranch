@@ -11,10 +11,10 @@ export default function Nizom() {
             <div className="NizomContainer">
                 <div className="NewsTitleLine">
                     <Link className='NewsTitleLineIcon' to={'/'}><RiBankLine /></Link>
-                    <AiOutlineRight />
+                    <AiOutlineRight  className='Iconright'/>
                     <Link className='NewsTitleLineText' to={'/'}>University</Link>
-                    <AiOutlineRight />
-                    <p>Universitet Ichki tartib qoidalari</p>
+                    <AiOutlineRight className='Iconright'/>
+                    <p>Nizom</p>
                 </div>
                 <div className="NizomImgBox">
                     <div className="NizomImg">

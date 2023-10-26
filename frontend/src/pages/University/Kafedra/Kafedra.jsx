@@ -9,9 +9,9 @@ export default function Kafedra() {
             <div className="KafedraContainer">
                 <div className="NewsTitleLine">
                     <Link className='NewsTitleLineIcon' to={'/'}><RiBankLine /></Link>
-                    <AiOutlineRight />
+                    <AiOutlineRight className='Iconright'/>
                     <Link className='NewsTitleLineText' to={'/'}>University</Link>
-                    <AiOutlineRight />
+                    <AiOutlineRight className='Iconright'/>
                     <p>Kafedra</p>
                 </div>
                 <div className="KafedraTitle">

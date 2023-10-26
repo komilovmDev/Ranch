@@ -10,9 +10,9 @@ export default function OdobPage() {
             <div className="OdobPageContainer">
                 <div className="NewsTitleLine">
                     <Link className='NewsTitleLineIcon' to={'/'}><RiBankLine /></Link>
-                    <AiOutlineRight />
+                    <AiOutlineRight className='Iconright'/>
                     <Link className='NewsTitleLineText' to={'/'}>University</Link>
-                    <AiOutlineRight />
+                    <AiOutlineRight className='Iconright'/>
                     <p>Universitet Ichki tartib qoidalari</p>
                 </div>
                 <div className="OdobPageText">

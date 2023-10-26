@@ -10,9 +10,9 @@ export default function NewsPage() {
             <div className="NewsPageContainer">
                 <div className="NewsTitleLine">
                     <Link className='NewsTitleLineIcon' to={'/'}><RiBankLine /></Link>
-                    <AiOutlineRight />
+                    <AiOutlineRight className='Iconright'/>
                     <Link className='NewsTitleLineText' to={'/News'}>Yangiliklar</Link>
-                    <AiOutlineRight />
+                    <AiOutlineRight className='Iconright'/>
                     <p>Qabul 2023-2024</p>
                 </div>
 

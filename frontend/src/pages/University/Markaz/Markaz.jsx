@@ -9,9 +9,9 @@ export default function Markaz() {
             <div className="MarkazContainer">
                 <div className="NewsTitleLine">
                     <Link className='NewsTitleLineIcon' to={'/'}><RiBankLine /></Link>
-                    <AiOutlineRight />
+                    <AiOutlineRight className='Iconright'/>
                     <Link className='NewsTitleLineText' to={'/'}>University</Link>
-                    <AiOutlineRight />
+                    <AiOutlineRight className='Iconright'/>
                     <p>Markaz va bo'limlar</p>
                 </div>
                 <div className="MarkazTitle">
