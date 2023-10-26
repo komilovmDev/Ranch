@@ -8,6 +8,8 @@ import NewsPage from './pages/NewsPage/NewsPage';
 import Markaz from './pages/University/Markaz/Markaz';
 import Kafedra from './pages/University/Kafedra/Kafedra';
 import Koidaich from './pages/University/KoidaIch/Koidaich';
+import OdobPage from './pages/University/Odob/OdobPAge';
+import Nizom from './pages/University/Nizom/Nizom';
 
 function App() {
 
@@ -22,6 +24,8 @@ function App() {
           <Route path='/University/Markaz' element={<Markaz/>} />
           <Route path='/University/Kafedra' element={<Kafedra/>} />
           <Route path='/University/IchqiTartib' element={<Koidaich/>} />
+          <Route path='/University/Odob' element={<OdobPage/>} />
+          <Route path='/University/Nizom' element={<Nizom/>} />
         </Routes>
         <Footer />
       </Router>
