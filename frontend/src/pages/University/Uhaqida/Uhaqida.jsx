@@ -1,6 +1,9 @@
 import './Uhaqida.css';
 import lit1 from './img/Lit1.png';
 import lit2 from './img/Lit2.png';
+import { Link } from 'react-router-dom';
+import { RiBankLine } from 'react-icons/ri';
+import { AiOutlineRight } from 'react-icons/ai';
 
 export default function Uhaqida() {
     return (

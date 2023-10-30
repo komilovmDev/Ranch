@@ -10,6 +10,8 @@ import Kafedra from './pages/University/Kafedra/Kafedra';
 import Koidaich from './pages/University/KoidaIch/Koidaich';
 import OdobPage from './pages/University/Odob/OdobPAge';
 import Nizom from './pages/University/Nizom/Nizom';
+import Uhaqida from './pages/University/Uhaqida/Uhaqida';
+import Fhamkor from './pages/Faoliyat/Fhamkor';
 
 function App() {
 
@@ -26,6 +28,8 @@ function App() {
           <Route path='/University/IchqiTartib' element={<Koidaich/>} />
           <Route path='/University/Odob' element={<OdobPage/>} />
           <Route path='/University/Nizom' element={<Nizom/>} />
+          <Route path='/University/Universitet_haqida' element={<Uhaqida/>} />
+          <Route path='/Faoliyat/Hamkor' element={<Fhamkor/>} />
         </Routes>
         <Footer />
       </Router>
