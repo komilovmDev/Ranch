@@ -12,6 +12,7 @@ import OdobPage from './pages/University/Odob/OdobPAge';
 import Nizom from './pages/University/Nizom/Nizom';
 import Uhaqida from './pages/University/Uhaqida/Uhaqida';
 import Fhamkor from './pages/Faoliyat/Fhamkor';
+import Yoshlar from './pages/Faoliyat/Yoshlar/Yoshlar';
 
 function App() {
 
@@ -30,6 +31,7 @@ function App() {
           <Route path='/University/Nizom' element={<Nizom/>} />
           <Route path='/University/Universitet_haqida' element={<Uhaqida/>} />
           <Route path='/Faoliyat/Hamkor' element={<Fhamkor/>} />
+          <Route path='/Faoliyat/Yoshlar' element={<Yoshlar/>} />
         </Routes>
         <Footer />
       </Router>

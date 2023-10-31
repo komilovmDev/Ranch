@@ -83,7 +83,7 @@ export default function Navbar() {
                         <button className="dropbtn">Faoliyat</button>
                         <div className="dropdown-content">
                             <Link to={'/Faoliyat/Hamkor'}><div className='LinkBox'><p>Xalqaro hamkor tashkilotlar</p> <button className='ButtonChek'><AiOutlineCheck /></button></div></Link>
-                            <Link><div className='LinkBox'><p>Yoshlar bilan ishlash va
+                            <Link to={'/Faoliyat/Yoshlar'}><div className='LinkBox'><p>Yoshlar bilan ishlash va
                                 ma'naviy-ma'rifiy faoliyat</p> <button className='ButtonChek'><AiOutlineCheck /></button></div></Link>
                         </div>
                     </div>
