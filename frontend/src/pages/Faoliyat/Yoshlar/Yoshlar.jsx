@@ -8,14 +8,14 @@ import { AiOutlineRight } from 'react-icons/ai';
   export default function Yoshlar() {
     return (
         <div className="Yoshlar">
-            <div className="YoshlarContainer">
+            <div className="YoshlarContainer">-
                 <div className="FhamkorContainer">
                     <div className="NewsTitleLine">
                         <Link className='NewsTitleLineIcon' to={'/'}><RiBankLine /></Link>
                         <AiOutlineRight className='Iconright' />
                         <Link className='NewsTitleLineText' to={'/'}>University</Link>
                         <AiOutlineRight className='Iconright' />
-                        <p>Yoshlar bilan ishlash va ma'naviy-ma'rifiy faoliyat</p>
+                        <p>Yoshlar bilan ishlash va ma’naviy-ma’rifiy faoliyat</p>
                     </div>
                 </div>
                 <div className="YoshlarContant">

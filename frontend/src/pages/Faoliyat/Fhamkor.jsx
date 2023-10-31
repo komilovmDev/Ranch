@@ -17,66 +17,78 @@ export default function Fhamkor() {
                 </div>
                 <div className="FhamkorContantGlav">
                     <div className="FhamkorContant">
-                        <div className="FhamkorContantBox">
-                            <div className="FhamkorBoxImg">
-                                <img src={Fpic1} alt="" />
+                        <Link>
+                            <div className="FhamkorContantBox">
+                                <div className="FhamkorBoxImg">
+                                    <img src={Fpic1} alt="" />
+                                </div>
+                                <div className="FhamkorBoxTitle">
+                                    <p>
+                                        Belarus-Rossiya universitet
+                                    </p>
+                                </div>
                             </div>
-                            <div className="FhamkorBoxTitle">
-                                <p>
-                                    Belarus-Rossiya universitet
-                                </p>
+                        </Link>
+                        <Link>
+                            <div className="FhamkorContantBox">
+                                <div className="FhamkorBoxImg">
+                                    <img src={Fpic1} alt="" />
+                                </div>
+                                <div className="FhamkorBoxTitle">
+                                    <p>
+                                        Belarus-Rossiya universitet
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                        <div className="FhamkorContantBox">
-                            <div className="FhamkorBoxImg">
-                                <img src={Fpic1} alt="" />
+                        </Link>
+                        <Link>
+                            <div className="FhamkorContantBox">
+                                <div className="FhamkorBoxImg">
+                                    <img src={Fpic1} alt="" />
+                                </div>
+                                <div className="FhamkorBoxTitle">
+                                    <p>
+                                        Belarus-Rossiya universitet
+                                    </p>
+                                </div>
                             </div>
-                            <div className="FhamkorBoxTitle">
-                                <p>
-                                    Belarus-Rossiya universitet
-                                </p>
+                        </Link>
+                        <Link>
+                            <div className="FhamkorContantBox">
+                                <div className="FhamkorBoxImg">
+                                    <img src={Fpic1} alt="" />
+                                </div>
+                                <div className="FhamkorBoxTitle">
+                                    <p>
+                                        Belarus-Rossiya universitet
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                        <div className="FhamkorContantBox">
-                            <div className="FhamkorBoxImg">
-                                <img src={Fpic1} alt="" />
+                        </Link>
+                        <Link>
+                            <div className="FhamkorContantBox">
+                                <div className="FhamkorBoxImg">
+                                    <img src={Fpic1} alt="" />
+                                </div>
+                                <div className="FhamkorBoxTitle">
+                                    <p>
+                                        Belarus-Rossiya universitet
+                                    </p>
+                                </div>
                             </div>
-                            <div className="FhamkorBoxTitle">
-                                <p>
-                                    Belarus-Rossiya universitet
-                                </p>
+                        </Link>
+                        <Link>
+                            <div className="FhamkorContantBox">
+                                <div className="FhamkorBoxImg">
+                                    <img src={Fpic1} alt="" />
+                                </div>
+                                <div className="FhamkorBoxTitle">
+                                    <p>
+                                        Belarus-Rossiya universitet
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                        <div className="FhamkorContantBox">
-                            <div className="FhamkorBoxImg">
-                                <img src={Fpic1} alt="" />
-                            </div>
-                            <div className="FhamkorBoxTitle">
-                                <p>
-                                    Belarus-Rossiya universitet
-                                </p>
-                            </div>
-                        </div>
-                        <div className="FhamkorContantBox">
-                            <div className="FhamkorBoxImg">
-                                <img src={Fpic1} alt="" />
-                            </div>
-                            <div className="FhamkorBoxTitle">
-                                <p>
-                                    Belarus-Rossiya universitet
-                                </p>
-                            </div>
-                        </div>
-                        <div className="FhamkorContantBox">
-                            <div className="FhamkorBoxImg">
-                                <img src={Fpic1} alt="" />
-                            </div>
-                            <div className="FhamkorBoxTitle">
-                                <p>
-                                    Belarus-Rossiya universitet
-                                </p>
-                            </div>
-                        </div>
+                        </Link>
                     </div>
                 </div>
             </div>

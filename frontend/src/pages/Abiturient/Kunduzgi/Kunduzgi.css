@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+.Kunduzgi {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 1.56vw;
+  margin-bottom: 4vw;
+  font-family: "Montserrat", sans-serif;
+}
+
+.KunduzgiContainer {
+  width: 70vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.KundizgiTitle p {
+  color: #3e3e3e;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1vw;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.KunduzgiContant {
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+}
+
+.KunduzgiTable {
+  width: 71vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5vw;
+  padding: 0;
+  margin: 0;
+}
+
+.KunduzgiTable table {
+  border-bottom: 0.1vw solid #0000004a;
+  font-size: 0.833vw;
+}
+
+.OneTableBoardTable .Vtoroe {
+  height: 2vw;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.Pervoe {
+  width: 10vw;
+  text-align: start;
+}
+
+.OneTableBoard {
+  color: #ff6400;
+  font-size: 0.833vw;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.Vtoroe {
+  width: 50vw;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.Tretie {
+  text-align: center;
+}

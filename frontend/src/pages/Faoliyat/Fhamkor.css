@@ -1,11 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 
 .Fhamkor{
+    padding-top: 1.56vw;
     font-family: "Montserrat", sans-serif;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 4vw;
 }
 
 .FhamkorContainer {
@@ -22,6 +24,10 @@
     flex-wrap: wrap;
     gap: 2vw;
 }
+ 
+.FhamkorContant a {
+    text-decoration: none;
+}
 
 .FhamkorContantGlav {
     display: flex;
@@ -32,6 +38,8 @@
     display: flex;
     flex-direction: column;
     gap: .5vw;
+    border-bottom: .1vw solid #000000;
+    padding-bottom: 1.69vw;
 }
 
 .FhamkorBoxImg {

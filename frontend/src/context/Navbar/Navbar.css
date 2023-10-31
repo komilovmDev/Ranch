@@ -230,7 +230,7 @@
 }
 
 .dropdown-content {
-  width: 16.66vw;
+  width: 16.66vw; 
   height: auto;
   display: none;
   position: absolute;
@@ -242,7 +242,13 @@
   z-index: 1;
 }
 
-.dropdown-content a {
+.DropButtonLink {
+  display: flex;
+  flex-direction: column;
+  gap: .5vw;
+}
+
+.dropdown-content a { 
   width: 100%;
   height: auto;
   color: var(--gray-900, #101828);
@@ -255,10 +261,8 @@
  
 }
 
-.dropdown:hover .dropdown-content {
-  display: flex;
-  flex-direction: column;
-  gap: .41vw;
+.dropdown:hover .dropdown-content { 
+  display: block;
 }
 
 .ButLang {

@@ -70,29 +70,37 @@ export default function Navbar() {
                     <div className="dropdown">
                         <button className="dropbtn">Universitet</button>
                         <div className="dropdown-content" >
-                            <Link to={'/University/Markaz'}><div className='LinkBox'><p>Markaz va bo'limlar</p> <button className='ButtonChek'><AiOutlineCheck /></button></div></Link>
-                            <Link to={'/University/Kafedra'}><div className='LinkBox'><p>Kafedralar</p> <button className='ButtonChek'><AiOutlineCheck /></button></div></Link>
-                            <Link><div className='LinkBox'><p>Rektorat</p> <button className='ButtonChek'><AiOutlineCheck /></button></div></Link>
-                            <Link to={'/University/IchqiTartib'}><div className='LinkBox'><p>Universitet Ichki tartib qoidalari</p> <button className='ButtonChek'><AiOutlineCheck /></button></div></Link>
-                            <Link to={'/University/Odob'}><div className='LinkBox'><p>Universitet Odob-axloq kodeksi</p> <button className='ButtonChek'><AiOutlineCheck /></button></div></Link>
-                            <Link to={'/University/Nizom'}><div className='LinkBox'><p>Universitet nizomi</p> <button className='ButtonChek'><AiOutlineCheck /></button></div></Link>
-                            <Link to={'/University/Universitet_haqida'}><div className='LinkBox'><p>Universtitet haqida</p> <button className='ButtonChek'><AiOutlineCheck /></button></div></Link>
+                            <div className="DropButtonLink">
+                                <Link to={'/University/Markaz'}><div className='LinkBox'><p>Markaz va bo'limlar</p> <button className='ButtonChek'><AiOutlineCheck /></button></div></Link>
+                                <Link to={'/University/Kafedra'}><div className='LinkBox'><p>Kafedralar</p> <button className='ButtonChek'><AiOutlineCheck /></button></div></Link>
+                                <Link><div className='LinkBox'><p>Rektorat</p> <button className='ButtonChek'><AiOutlineCheck /></button></div></Link>
+                                <Link to={'/University/IchqiTartib'}><div className='LinkBox'><p>Universitet Ichki tartib qoidalari</p> <button className='ButtonChek'><AiOutlineCheck /></button></div></Link>
+                                <Link to={'/University/Odob'}><div className='LinkBox'><p>Universitet Odob-axloq kodeksi</p> <button className='ButtonChek'><AiOutlineCheck /></button></div></Link>
+                                <Link to={'/University/Nizom'}><div className='LinkBox'><p>Universitet nizomi</p> <button className='ButtonChek'><AiOutlineCheck /></button></div></Link>
+                                <Link to={'/University/Universitet_haqida'}><div className='LinkBox'><p>Universtitet haqida</p> <button className='ButtonChek'><AiOutlineCheck /></button></div></Link>
+                            </div>
                         </div>
                     </div>
                     <div className="dropdown">
                         <button className="dropbtn">Faoliyat</button>
                         <div className="dropdown-content">
-                            <Link to={'/Faoliyat/Hamkor'}><div className='LinkBox'><p>Xalqaro hamkor tashkilotlar</p> <button className='ButtonChek'><AiOutlineCheck /></button></div></Link>
-                            <Link to={'/Faoliyat/Yoshlar'}><div className='LinkBox'><p>Yoshlar bilan ishlash va
-                                ma'naviy-ma'rifiy faoliyat</p> <button className='ButtonChek'><AiOutlineCheck /></button></div></Link>
+                            <div className="DropButtonLink">
+                                <Link to={'/Faoliyat/Hamkor'}><div className='LinkBox'><p>Xalqaro hamkor tashkilotlar</p> <button className='ButtonChek'><AiOutlineCheck /></button></div></Link>
+                                <Link to={'/Faoliyat/Yoshlar'}><div className='LinkBox'><p>Yoshlar bilan ishlash va ma’naviy-ma’rifiy faoliyat</p> <button className='ButtonChek'><AiOutlineCheck /></button></div></Link>
+                            </div>
                         </div>
                     </div>
                     <div className="dropdown">
                         <button className="dropbtn">Abiturent</button>
                         <div className="dropdown-content">
-                            <a href="#">Link 1</a>
-                            <a href="#">Link 2</a>
-                            <a href="#">Link 3</a>
+                            <div className="DropButtonLink">
+                                <Link to={'/Abiturient/Kunduzgi'}><div className='LinkBox'><p>Kunduzgi ta’lim yo’nalishlari</p> <button className='ButtonChek'><AiOutlineCheck /></button></div></Link>
+                                <Link to={'/Abiturient/Sirtiq'}><div className='LinkBox'><p>Sirtqi ta’lim yo’nalishlari</p> <button className='ButtonChek'><AiOutlineCheck /></button></div></Link>
+                                <Link to={'/Abiturient/Magistr'}><div className='LinkBox'><p>Magistratura yo’nalishlari va qabul kvotasi</p> <button className='ButtonChek'><AiOutlineCheck /></button></div></Link><br/>
+                                <Link to={'/Abiturient/Ikkinchi'}><div className='LinkBox'><p>Ikkinchi mutaxassislik</p> <button className='ButtonChek'><AiOutlineCheck /></button></div></Link>
+                                <Link to={'/Abiturient/Qochirish'}><div className='LinkBox'><p>O’qishni ko’chirish</p> <button className='ButtonChek'><AiOutlineCheck /></button></div></Link>
+                                <Link to={'/Abiturient/Zayavka'}><div className='LinkBox'><p>Onlayn hujjat topshirish</p> <button className='ButtonChek'><AiOutlineCheck /></button></div></Link>
+                            </div>
                         </div>
                     </div>
                     <div className="dropdown">

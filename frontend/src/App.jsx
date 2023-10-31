@@ -13,6 +13,7 @@ import Nizom from './pages/University/Nizom/Nizom';
 import Uhaqida from './pages/University/Uhaqida/Uhaqida';
 import Fhamkor from './pages/Faoliyat/Fhamkor';
 import Yoshlar from './pages/Faoliyat/Yoshlar/Yoshlar';
+import Kunduzgi from './pages/Abiturient/Kunduzgi/Kunduzgi';
 
 function App() {
 
@@ -32,6 +33,13 @@ function App() {
           <Route path='/University/Universitet_haqida' element={<Uhaqida/>} />
           <Route path='/Faoliyat/Hamkor' element={<Fhamkor/>} />
           <Route path='/Faoliyat/Yoshlar' element={<Yoshlar/>} />
+          <Route path='/Abiturient/Kunduzgi' element={<Kunduzgi/>} />
+          <Route path='/Abiturient/Sirtiq' element={<Kunduzgi/>} />
+          <Route path='/Abiturient/Magistr' element={<Kunduzgi/>} />
+          <Route path='/Abiturient/Ikkinchi' element={<Kunduzgi/>} />
+          <Route path='/Abiturient/Qochirish' element={<Kunduzgi/>} />
+          <Route path='/Abiturient/Zayavka' element={<Kunduzgi/>} />
+          
         </Routes>
         <Footer />
       </Router>
