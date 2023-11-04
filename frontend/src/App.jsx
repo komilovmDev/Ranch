@@ -14,6 +14,7 @@ import Uhaqida from './pages/University/Uhaqida/Uhaqida';
 import Fhamkor from './pages/Faoliyat/Fhamkor';
 import Yoshlar from './pages/Faoliyat/Yoshlar/Yoshlar';
 import Kunduzgi from './pages/Abiturient/Kunduzgi/Kunduzgi';
+import Zayavka from './pages/Abiturient/Zayafka/Zayavka';
 
 function App() {
 
@@ -38,7 +39,7 @@ function App() {
           <Route path='/Abiturient/Magistr' element={<Kunduzgi/>} />
           <Route path='/Abiturient/Ikkinchi' element={<Kunduzgi/>} />
           <Route path='/Abiturient/Qochirish' element={<Kunduzgi/>} />
-          <Route path='/Abiturient/Zayavka' element={<Kunduzgi/>} />
+          <Route path='/Abiturient/Zayavka' element={<Zayavka/>} />
           
         </Routes>
         <Footer />

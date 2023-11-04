@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+.Zayavka {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 1.56vw;
+  margin-bottom: 4vw;
+  font-family: "Montserrat", sans-serif;
+}
+
+.ZayavkaContainer {
+  width: 70vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ZayavkaOneContainer {
+  width: 60vw;
+  border-radius: 0.5vw;
+  background-color: #f5f7fa;
+  padding: 2.8vw;
+  display: flex;
+  flex-direction: column;
+  gap: 4vw;
+}
+
+.ZOCName {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ZOCName form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5vw;
+  width: 17vw;
+  color: #777;
+}
+
+.ZOCName form input {
+  outline: none;
+  height: 2vw;
+  border-radius: 0.5vw;
+  border: 0.1vw solid #ff66002b;
+  background: #ffff;
+  padding: 0 0.5vw;
+  font-size: 0.833vw;
+  font-family: "Montserrat", sans-serif;
+}
+
+.ZOCName form input:focus {
+  border: 0.1vw solid #ff6400;
+  transition: 0.5s all ease-in-out;
+}
+
+input:invalid {
+  border: 0.1vw solid #ff0000;
+}
+
+input:valid {
+  border: none;
+}
+
+.ZOCPhone {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 0.5vw;
+  color: #777;
+}
+
+.ZOCPhone form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5vw;
+}
+
+.ZOCPhone form input {
+  outline: none;
+  width: 26vw;
+  height: 2vw;
+  border-radius: 0.5vw;
+  border: 0.1vw solid #ff66002b;
+  background: #ffff;
+  padding: 0 0.5vw;
+  font-size: 0.833vw;
+  font-family: "Montserrat", sans-serif;
+}
+
+.ZOCPhone form input:focus {
+  border: 0.1vw solid #ff6400;
+  transition: 0.5s all ease-in-out;
+}
+
+.ZOCDok {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 0.5vw;
+  color: #777;
+}
+
+.ZOCDok form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5vw;
+}
+
+.ZOCDok form input {
+  outline: none;
+  width: 15vw;
+  height: 2vw;
+  border-radius: 0.5vw;
+  border: 0.1vw solid #ff66002b;
+  background: #ffff;
+  padding: 0 0.5vw;
+  font-size: 0.833vw;
+  font-family: "Montserrat", sans-serif;
+}
+
+.ZOCDok form input:focus {
+  border: 0.1vw solid #ff6400;
+  transition: 0.5s all ease-in-out;
+}
+
+.ZOCvibor {
+  display: flex;
+  flex-direction: column;
+  gap: .5vw;
+}
+
+.ZOCvibor p{
+  padding: 0;
+  margin: 0;
+  color: #777;
+  font-size: 1vw;
+  font-weight: 500;
+}
+
+.ZOCvibor form {
+  display: flex;
+  flex-direction: column;
+}
+
+.ZOCvibor label {
+  font-size: .9vw;
+  color: #777;
+}
+
+.ZOCvibor form div{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
