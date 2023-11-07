@@ -2,6 +2,7 @@ import './Zayavka.css';
 import { Link } from 'react-router-dom';
 import { RiBankLine } from 'react-icons/ri';
 import { AiOutlineRight } from 'react-icons/ai';
+import Dropdown from '../../../context/Dropdwn/Dropdwn';
 
 
 export default function Zayavka() {
@@ -60,19 +61,23 @@ export default function Zayavka() {
                                 <p>Jinsi</p>
                                 <form>
                                     <div>
-                                    <label htmlFor="raz">Erkak</label>
+                                        <label htmlFor="raz">Erkak</label>
                                         <input type="radio" checked name="raz" />
                                     </div>
                                     <div>
-                                    <label htmlFor="raz">Ayol</label>
-                                    <input type="radio" name="raz" />
+                                        <label htmlFor="raz">Ayol</label>
+                                        <input type="radio" name="raz" />
                                     </div>
                                 </form>
+                            </div>
+                            <div className="ZOCVibor">
+                                <label htmlFor="vibor">Yo‘nalishlar</label>
+                                <Dropdown/>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
     )
 }

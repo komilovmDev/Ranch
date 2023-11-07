@@ -245,7 +245,6 @@
 .DropButtonLink {
   display: flex;
   flex-direction: column;
-  gap: .5vw;
 }
 
 .dropdown-content a { 
