@@ -7,6 +7,8 @@ import { AiOutlineCheck } from 'react-icons/ai';
 import { useEffect } from "react";
 import { useState } from "react";
 import { Link } from 'react-router-dom';
+import axios from 'axios';
+
 
 
 export default function Navbar() {
@@ -29,6 +31,24 @@ export default function Navbar() {
             window.removeEventListener('scroll', FixedNav); // komponent ochirilganda eshitamizni to'xtatamiz
         };
     }, []);
+
+    // categores 
+
+    const [categors, setcategors] = useState([])
+    const getCategors = async () => {
+        try {
+            const response = await axios.get('https://utu-ranch.uz/api/categories/')
+            setcategors(response.data)
+            console.log(categors);
+        } catch (error) {
+            console.error("Categors:", error)
+            return null
+        }
+    }
+
+    useEffect(() => {
+        getCategors()
+    }, [])
 
 
     return (
@@ -64,10 +84,23 @@ export default function Navbar() {
                     </div>
                 </div>
                 <div className="NavDown">
-                    <div className="dropdown">
-                        <Link to={'/News'}><button className="dropbtn">Yangiliklar</button></Link>
-                    </div>
-                    <div className="dropdown">
+                    {
+                        categors.map(category => (
+                            <div className="dropdown">
+                                <Link to={'/News'}><button className="dropbtn">{category.name}</button></Link>
+                                <div className="dropdown-content" >
+                                    <div className="DropButtonLink">
+                                        {
+                                            category.children.map(item => (
+                                                <Link to={'/University/Markaz'}><div className='LinkBox'><p>{item.name}</p> <button className='ButtonChek'><AiOutlineCheck /></button></div></Link>
+                                            ))
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        ))
+                    }
+                    {/* <div className="dropdown">
                         <button className="dropbtn">Universitet</button>
                         <div className="dropdown-content" >
                             <div className="DropButtonLink">
@@ -142,7 +175,7 @@ export default function Navbar() {
                             <a href="#">Link 2</a>
                             <a href="#">Link 3</a>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>
