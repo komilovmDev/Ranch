@@ -72,12 +72,23 @@ export default function Zayavka() {
                             </div>
                             <div className="ZOCVibor">
                                 <label htmlFor="vibor">Yo‘nalishlar</label>
-                                <Dropdown/>
-                                </div>
+                                <Dropdown />
+                            </div>
+                            <div className="ZOCManzil">
+                                <label htmlFor="text">Manzil</label>
+                                <input type="text" minLength="4"/>
+                            </div>
+                            <div className="ZOCFail">
+                                <form>
+                                    <label htmlFor="file">Attestat fayli</label>
+                                    <input type="file" />
+                                </form>
+
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
     )
 }

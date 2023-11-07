@@ -188,6 +188,8 @@ input[type='radio']:checked:after {
 .ZOCVibor {
   display: flex;
   flex-direction: column;
+  gap: 1vw;
+  color: #777;
 }
 
 .ZOCVibor select{
@@ -241,4 +243,29 @@ input[type='radio']:checked:after {
 
 .dropdownOption:hover .dropdown-contentOption { 
   display: block;
+}
+
+.ZOCManzil {
+  display: flex;
+  flex-direction: column;
+  gap: .5vw;
+  color: #777;
+}
+
+.ZOCManzil input{
+  width: 100%;
+  height: 3vw;
+  outline: none;
+  border: none;
+  display: flex;
+  justify-content: ;
+  align-items: flex-start;
+  color: #777;
+  border: 0.1vw solid #ff66002b;
+  border-radius: .5vw;
+}
+
+.ZOCManzil input:focus {
+  border: 0.1vw solid #ff6400;
+  transition: 0.5s all ease-in-out;
 }

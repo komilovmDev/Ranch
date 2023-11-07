@@ -55,6 +55,7 @@ li:hover {
   position: relative;
   z-index: 5;
   font-size: 0.833vw;
+  background-color: #fff;
 }
 
 #UlDiv {
@@ -80,12 +81,15 @@ li:hover {
 #UlDiv ul{
     display: flex;
     flex-direction: column;
+    padding: .4vw .6vw;
     gap: .5vw;
 }
 
 #UlDiv ul li{
     display: flex;
     justify-content: space-between;
+    width: 100%;
+    height: 1vw;
 }
 
 #UlDiv ul li:hover .ButtonChek{
@@ -101,3 +105,9 @@ li:hover {
     font-size: 1vw;
     display: none;
   }
+
+  #UlDiv ul li:hover {
+    display: flex;
+    background-color: inherit;
+
+}
