@@ -1,7 +1,10 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState, useRef, useEffect } from "react";
-import * as style from "./Dropdwn.css";
+import style from "./Dropdwn.css";
 import { AiOutlineDown } from 'react-icons/ai';
+import { AiOutlineCheck } from 'react-icons/ai';
+import { Link } from "react-router-dom";
+
 
 export default function Dropdown() {
     const container = useRef();
@@ -44,10 +47,10 @@ export default function Dropdown() {
             {dropdownState.open && (
                 <div id="UlDiv" className={style.dropdown}>
                     <ul>
-                        <li onClick={() => handleItemClick("Iqtisodiyot (tarmoqlar va sohalar bo'yicha)")}>Iqtisodiyot (tarmoqlar va sohalar bo'yicha)</li>
-                        <li onClick={() => handleItemClick("Buxgalteriya hisobi va audit (tarmoqlar va sohalar bo'yicha)")}>Buxgalteriya hisobi va audit (tarmoqlar va sohalar bo'yicha)</li>
-                        <li onClick={() => handleItemClick("Menejment (tarmoqlar va sohalar bo'yicha)")}>Menejment (tarmoqlar va sohalar bo'yicha)</li>
-                        <li onClick={() => handleItemClick("Marketing (tarmoqlar va sohalar bo'yicha)")}>Marketing (tarmoqlar va sohalar bo'yicha)</li>
+                        <li onClick={() => handleItemClick("Iqtisodiyot (tarmoqlar va sohalar bo'yicha)")}>Iqtisodiyot (tarmoqlar va sohalar bo'yicha)<button className='ButtonChek'><AiOutlineCheck /></button></li>
+                        <li onClick={() => handleItemClick("Buxgalteriya hisobi va audit (tarmoqlar va sohalar bo'yicha)")}>Buxgalteriya hisobi va audit (tarmoqlar va sohalar bo'yicha)<button className='ButtonChek'><AiOutlineCheck /></button></li>
+                        <li onClick={() => handleItemClick("Menejment (tarmoqlar va sohalar bo'yicha)")}>Menejment (tarmoqlar va sohalar bo'yicha)<button className='ButtonChek'><AiOutlineCheck /></button></li>
+                        <li onClick={() => handleItemClick("Marketing (tarmoqlar va sohalar bo'yicha)")}>Marketing (tarmoqlar va sohalar bo'yicha)<button className='ButtonChek'><AiOutlineCheck /></button></li>
                     </ul>
                 </div>
             )}
