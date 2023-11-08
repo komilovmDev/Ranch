@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { RiBankLine } from 'react-icons/ri';
 import { AiOutlineRight } from 'react-icons/ai';
 import Dropdown from '../../../context/Dropdwn/Dropdwn';
+import BasicTable from '../../../context/Table/BasicTable';
 
 
 export default function Zayavka() {
@@ -76,14 +77,26 @@ export default function Zayavka() {
                             </div>
                             <div className="ZOCManzil">
                                 <label htmlFor="text">Manzil</label>
-                                <input type="text" minLength="4"/>
+                                <input type="text" minLength="4" />
                             </div>
                             <div className="ZOCFail">
-                                <form>
-                                    <label htmlFor="file">Attestat fayli</label>
-                                    <input type="file" />
+                                <form method="post">
+                                    <p>Passport fayli</p>
+                                    <label className="input-file">
+                                        <input type="file" name='file' />
+                                        <span>Fayl yuklash</span>
+                                    </label>
                                 </form>
-
+                                <form method="post">
+                                    <p>Attestat fayli</p>
+                                    <label className="input-file">
+                                        <input type="file" name='file' />
+                                        <span>Fayl yuklash</span>
+                                    </label>
+                                </form>
+                            </div>
+                            <div className="ZOCtable">
+                                <BasicTable/>
                             </div>
                         </div>
                     </div>
