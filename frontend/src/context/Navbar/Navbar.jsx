@@ -94,7 +94,7 @@ export default function Navbar() {
                                         {
                                             category.children.map(item => (
                                                 // eslint-disable-next-line react/jsx-key
-                                                <Link to={'/University/Markaz'}><div className='LinkBox'><p>{item.name}</p> <button className='ButtonChek'><AiOutlineCheck /></button></div></Link>
+                                                <Link to={`/University/Markaz/${item.id}`}><div className='LinkBox'><p>{item.name}</p> <button className='ButtonChek'><AiOutlineCheck /></button></div></Link>
                                             ))
                                         }
                                     </div>
