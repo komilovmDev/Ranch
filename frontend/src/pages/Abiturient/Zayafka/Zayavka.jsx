@@ -96,7 +96,72 @@ export default function Zayavka() {
                                 </form>
                             </div>
                             <div className="ZOCtable">
-                                <BasicTable/>
+                                <BasicTable />
+                            </div>
+
+                            <div className="ZOCFail">
+                                <form method="post">
+                                    <p>Sertifikat fayl</p>
+                                    <label className="input-file">
+                                        <input type="file" name='file' />
+                                        <span>Fayl yuklash</span>
+                                    </label>
+                                </form>
+                            </div>
+                            <div className="ZOCtable">
+                                <div className="BasicTable">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>To‘plagan bali</th>
+                                                <th>Talim tili</th>
+                                                <th>Imtiyoz</th>
+                                                <th>Izoh</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>179 – 189 ball</td>
+                                                <td>O‘zbek</td>
+                                                <td>Grant</td>
+                                                <td>Universitet tomonidan stipendiya tayinlanadi</td>
+                                            </tr>
+                                            <tr>
+                                                <td>169 – 189 ball</td>
+                                                <td>Rus</td>
+                                                <td>Grant</td>
+                                                <td>Universitet tomonidan stipendiya tayinlanadi</td>
+                                            </tr>
+                                            <tr>
+                                                <td>169-178 ball</td>
+                                                <td>O‘zbek</td>
+                                                <td>50% lik grant</td>
+                                                <td>Talaba to‘lov-shartnoma miqdorining yarimini to‘laydi</td>
+                                            </tr>
+                                            <tr>
+                                                <td>159-168 ball</td>
+                                                <td>Rus</td>
+                                                <td>50% lik grant</td>
+                                                <td>Talaba to‘lov-shartnoma miqdorining yarimini to‘laydi</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div className="ZOCFail">
+                                <form method="post">
+                                    <p> Davlan universitetida to‘plagan bali</p>
+                                    <label className="input-file">
+                                        <input type="file" name='file' />
+                                        <span>Fayl yuklash</span>
+                                    </label>
+                                </form>
+                            </div>
+
+                            <div className="ZOCJonatish">
+                                <form>
+                                    <label type="submit" name="submit-button"><p>Jonatish</p><input type="submit" /></label>
+                                </form>
                             </div>
                         </div>
                     </div>
