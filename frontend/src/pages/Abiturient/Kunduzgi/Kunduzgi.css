@@ -43,7 +43,17 @@
 }
 
 .KunduzgiTable table {
+  font-size: 0.833vw;
+}
+
+.KunduzgiTable table tr{
   border-bottom: 0.1vw solid #0000004a;
+  font-size: 0.833vw;
+}
+
+.KunduzgiTable table td{
+  border-right:none;
+  border-left:none;
   font-size: 0.833vw;
 }
 
