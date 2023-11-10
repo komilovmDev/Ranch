@@ -88,13 +88,13 @@ export default function Navbar() {
                         categors.map(category => (
                             // eslint-disable-next-line react/jsx-key
                             <div className="dropdown">
-                                <Link to={'/News'}><button className="dropbtn">{category.name}</button></Link>
+                                <Link><button className="dropbtn">{category.name}</button></Link>
                                 <div className="dropdown-content" >
                                     <div className="DropButtonLink">
                                         {
                                             category.children.map(item => (
                                                 // eslint-disable-next-line react/jsx-key
-                                                <Link to={`/University/Markaz/${item.id}`}><div className='LinkBox'><p>{item.name}</p> <button className='ButtonChek'><AiOutlineCheck /></button></div></Link>
+                                                <Link to={`/${item.slug}/${item.id}`}><div className='LinkBox'><p>{item.name}</p> <button className='ButtonChek'><AiOutlineCheck /></button></div></Link>
                                             ))
                                         }
                                     </div>

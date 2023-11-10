@@ -26,20 +26,20 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/News' element={<News />} />
           <Route path='/New' element={<NewsPage/>} />
-          <Route path='/University/Markaz/:id' element={<Markaz/>} />
-          <Route path='/University/Kafedra' element={<Kafedra/>} />
-          <Route path='/University/IchqiTartib' element={<Koidaich/>} />
-          <Route path='/University/Odob' element={<OdobPage/>} />
+          <Route path='/:slug/:id' element={<Markaz/>} />
+          <Route path='/Kafedra' element={<Kafedra/>} />
+          <Route path='/IchqiTartib' element={<Koidaich/>} />
+          <Route path='/Odob' element={<OdobPage/>} />
           <Route path='/University/Nizom' element={<Nizom/>} />
           <Route path='/University/Universitet_haqida' element={<Uhaqida/>} />
           <Route path='/Faoliyat/Hamkor' element={<Fhamkor/>} />
           <Route path='/Faoliyat/Yoshlar' element={<Yoshlar/>} />
-          <Route path='/Abiturient/Kunduzgi' element={<Kunduzgi/>} />
+          <Route path='/Kunduzgi-talim-yonalishlari/:id' element={<Kunduzgi/>} />
           <Route path='/Abiturient/Sirtiq' element={<Kunduzgi/>} />
           <Route path='/Abiturient/Magistr' element={<Kunduzgi/>} />
           <Route path='/Abiturient/Ikkinchi' element={<Kunduzgi/>} />
           <Route path='/Abiturient/Qochirish' element={<Kunduzgi/>} />
-          <Route path='/Abiturient/Zayavka' element={<Zayavka/>} />
+          <Route path='/online-hujjat-topshirish/:id' element={<Zayavka/>} />
           
         </Routes>
         <Footer />
