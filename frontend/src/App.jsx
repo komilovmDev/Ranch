@@ -24,10 +24,10 @@ function App() {
         <Navbar />
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/News' element={<News />} />
+          <Route path='/:slug/:id' element={<News />} />
           <Route path='/New' element={<NewsPage/>} />
           <Route path='/:slug/:id' element={<Markaz/>} />
-          <Route path='/Kafedra' element={<Kafedra/>} />
+          <Route path='/:slug/:id' element={<Kafedra/>} />
           <Route path='/IchqiTartib' element={<Koidaich/>} />
           <Route path='/Odob' element={<OdobPage/>} />
           <Route path='/University/Nizom' element={<Nizom/>} />

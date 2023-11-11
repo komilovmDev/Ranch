@@ -1,108 +1,122 @@
-import './Navbar.css';
-import phone from './../../pages/Home/HomeAssets/IMG/Vector.png';
-import email from './../../pages/Home/HomeAssets/IMG/Component.png';
-import logo from './../../pages/Home/HomeAssets/IMG/Ranch.png';
-import { AiOutlineSearch } from 'react-icons/ai';
-import { AiOutlineCheck } from 'react-icons/ai';
+import "./Navbar.css";
+import phone from "./../../pages/Home/HomeAssets/IMG/Vector.png";
+import email from "./../../pages/Home/HomeAssets/IMG/Component.png";
+import logo from "./../../pages/Home/HomeAssets/IMG/Ranch.png";
+import { AiOutlineSearch } from "react-icons/ai";
+import { AiOutlineCheck } from "react-icons/ai";
 import { useEffect } from "react";
 import { useState } from "react";
-import { Link } from 'react-router-dom';
-import axios from 'axios';
-
-
+import { Link } from "react-router-dom";
+import axios from "axios";
 
 export default function Navbar() {
-    //Navbar Fixed
-    const [navClass, setNavClass] = useState('Navbar__Container');
+  //Navbar Fixed
+  const [navClass, setNavClass] = useState("Navbar__Container");
 
-    function FixedNav() {
-        const scrollY = window.scrollY; // Scroll y positionni hozir funksiya ichida olishimiz kerak
-        if (scrollY > 200) {
-            setNavClass('Navbar__Container fixed');
-        } else {
-            setNavClass('Navbar__Container'); // Scroll 200 dan kam bo'lsa fixed klassini olib tashlash
-        }
+  function FixedNav() {
+    const scrollY = window.scrollY; // Scroll y positionni hozir funksiya ichida olishimiz kerak
+    if (scrollY > 200) {
+      setNavClass("Navbar__Container fixed");
+    } else {
+      setNavClass("Navbar__Container"); // Scroll 200 dan kam bo'lsa fixed klassini olib tashlash
     }
+  }
 
+  useEffect(() => {
+    window.addEventListener("scroll", FixedNav); // scroll hodisasini eshitamiz
+    return () => {
+      window.removeEventListener("scroll", FixedNav); // komponent ochirilganda eshitamizni to'xtatamiz
+    };
+  }, []);
 
-    useEffect(() => {
-        window.addEventListener('scroll', FixedNav); // scroll hodisasini eshitamiz
-        return () => {
-            window.removeEventListener('scroll', FixedNav); // komponent ochirilganda eshitamizni to'xtatamiz
-        };
-    }, []);
+  // categores
 
-    // categores 
-
-    const [categors, setcategors] = useState([])
-    const getCategors = async () => {
-        try {
-            const response = await axios.get('https://utu-ranch.uz/api/categories/')
-            setcategors(response.data)
-            console.log(categors);
-        } catch (error) {
-            console.error("Categors:", error)
-            return null
-        }
+  const [categors, setcategors] = useState([]);
+  const getCategors = async () => {
+    try {
+      const response = await axios.get("https://utu-ranch.uz/api/categories/");
+      setcategors(response.data);
+      console.log(categors);
+    } catch (error) {
+      console.error("Categors:", error);
+      return null;
     }
+  };
 
-    useEffect(() => {
-        getCategors()
-    }, [])
+  useEffect(() => {
+    getCategors();
+  }, []);
 
-
-    return (
-        <div className={navClass} id='Navbar' >
-            <div className="NavContainer">
-                <div className="NavUp">
-                    <div className="LogBut">
-                        <img src={logo} alt="png" />
-                        <button> Murojat uchun </button>
-                    </div>
-                    <div className="LabInp">
-                        <label htmlFor=""><input type="search" placeholder='Qidirish' /> <button type='submit'><AiOutlineSearch /></button></label>
-                    </div>
-                    <div className='TelEmail'>
-                        <div className="Tel">
-                            <img src={phone} alt="" />
-                            <a href='tel:+998622277772'>62 227 77 72</a>
-                        </div>
-                        <div className="Email">
-                            <img src={email} alt="" />
-                            <a href='mailto:university@utu-ranch.uz'>university@utu-ranch.uz</a>
-                        </div>
-                    </div>
-                    <div className="ButLang">
-                        <button>
-                            Kirish
+  return (
+    <div className={navClass} id="Navbar">
+      <div className="NavContainer">
+        <div className="NavUp">
+          <div className="LogBut">
+            <Link to={"/"}>
+              <img src={logo} alt="png" />
+            </Link>
+            <button> Murojat uchun </button>
+          </div>
+          <div className="LabInp">
+            <label htmlFor="">
+              <input type="search" placeholder="Qidirish" />{" "}
+              <button type="submit">
+                <AiOutlineSearch />
+              </button>
+            </label>
+          </div>
+          <div className="TelEmail">
+            <div className="Tel">
+              <img src={phone} alt="" />
+              <a href="tel:+998622277772">62 227 77 72</a>
+            </div>
+            <div className="Email">
+              <img src={email} alt="" />
+              <a href="mailto:university@utu-ranch.uz">
+                university@utu-ranch.uz
+              </a>
+            </div>
+          </div>
+          <div className="ButLang">
+            <button>Kirish</button>
+            <select name="lang" id="lang">
+              <option value="en">
+                <button>UZ</button>
+              </option>
+              <option value="en">
+                <button>RU</button>
+              </option>
+              <option value="en">
+                <button>EN</button>
+              </option>
+            </select>
+          </div>
+        </div>
+        <div className="NavDown">
+          {categors.map((category) => (
+            // eslint-disable-next-line react/jsx-key
+            <div className="dropdown">
+              <Link>
+                <button className="dropbtn">{category.name}</button>
+              </Link>
+              <div className="dropdown-content">
+                <div className="DropButtonLink">
+                  {category.children.map((item) => (
+                    // eslint-disable-next-line react/jsx-key
+                    <Link to={`/${item.slug}/${item.id}`}>
+                      <div className="LinkBox">
+                        <p>{item.name}</p>{" "}
+                        <button className="ButtonChek">
+                          <AiOutlineCheck />
                         </button>
-                        <select name="lang" id="lang">
-                            <option value="en"><button>UZ</button></option>
-                            <option value="en"><button>RU</button></option>
-                            <option value="en"><button>EN</button></option>
-                        </select>
-                    </div>
+                      </div>
+                    </Link>
+                  ))}
                 </div>
-                <div className="NavDown">
-                    {
-                        categors.map(category => (
-                            // eslint-disable-next-line react/jsx-key
-                            <div className="dropdown">
-                                <Link><button className="dropbtn">{category.name}</button></Link>
-                                <div className="dropdown-content" >
-                                    <div className="DropButtonLink">
-                                        {
-                                            category.children.map(item => (
-                                                // eslint-disable-next-line react/jsx-key
-                                                <Link to={`/${item.slug}/${item.id}`}><div className='LinkBox'><p>{item.name}</p> <button className='ButtonChek'><AiOutlineCheck /></button></div></Link>
-                                            ))
-                                        }
-                                    </div>
-                                </div>
-                            </div>
-                        ))
-                    }
-                    {/* <div className="dropdown">
+              </div>
+            </div>
+          ))}
+          {/* <div className="dropdown">
                         <button className="dropbtn">Universitet</button>
                         <div className="dropdown-content" >
                             <div className="DropButtonLink">
@@ -178,8 +192,8 @@ export default function Navbar() {
                             <a href="#">Link 3</a>
                         </div>
                     </div> */}
-                </div>
-            </div>
         </div>
-    )
+      </div>
+    </div>
+  );
 }

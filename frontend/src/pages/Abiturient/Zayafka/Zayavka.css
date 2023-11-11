@@ -312,3 +312,9 @@ input[type='radio']:checked:after {
 .ZOCJonatish input{
   display: none;
 }
+
+.ZOCJonatish {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
