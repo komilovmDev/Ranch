@@ -1,12 +1,23 @@
 import './Zayavka.css';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { RiBankLine } from 'react-icons/ri';
 import { AiOutlineRight } from 'react-icons/ai';
 import Dropdown from '../../../context/Dropdwn/Dropdwn';
 import BasicTable from '../../../context/Table/BasicTable';
+import axios from 'axios'
+import { useState } from 'react';
 
 
 export default function Zayavka() {
+
+
+    const { id } = useParams()
+    const [data,setData] = useState([])
+    const getZyafka = async () => {
+        const response = await axios.get(`https://utu-ranch.uz/api/content/${id}/`);
+        setData(response.data)
+        console.log(response.data);
+    }
     return (
         <div className="Zayavka">
             <div className="ZayavkaContainer">
