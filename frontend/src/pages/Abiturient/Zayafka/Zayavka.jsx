@@ -13,62 +13,42 @@ export default function Zayavka() {
 
     const { id } = useParams();
     const [data, setData] = useState([]);
-  
+
     const getZyafka = async () => {
-      try {
-        const response = await axios.get(`https://utu-ranch.uz/api/content/${id}/`);
-        setData(response.data);
-        console.log(response.data);
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
+        try {
+            const response = await axios.get(`https://utu-ranch.uz/api/content/${id}/`);
+            setData(response.data);
+            console.log(response.data);
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
     };
-  
+
     useEffect(() => {
-      getZyafka();
+        getZyafka();
     }, [id]);
-    
 
-    const [formData, setFormData] = useState({
-        familiya: '',
-        ismi: '',
-        sharifi: '',
-        telefon: '',
-        email: '',
-        pasport_seriya: '',
-        pasport_raqami: '',
-        tugilgan_yil: '',
-        jinsi: '',
-      });
 
-      const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData({
-          ...formData,
-          [name]: value,
-        });
-      };
 
-    
     return (
         <div className="Zayavka">
-            {
-                data.map(item => {
-                    <div className="ZayavkaContainer" key={item.id}>
-                        <div className="NewsTitleLine">
-                            <Link className='NewsTitleLineIcon' to={'/'}><RiBankLine /></Link>
-                            <AiOutlineRight className='Iconright' />
-                            <Link className='NewsTitleLineText' to={'/'}>University</Link>
-                            <AiOutlineRight className='Iconright' />
-                            <p>{item.title}</p>
-                        </div>
+            <div className="ZayavkaContainer">
+                <div className="NewsTitleLine">
+                    <Link className='NewsTitleLineIcon' to={'/'}><RiBankLine /></Link>
+                    <AiOutlineRight className='Iconright' />
+                    <Link className='NewsTitleLineText' to={'/'}>University</Link>
+                    <AiOutlineRight className='Iconright' />
+                    <p>{""}</p>
+                </div>
+                {
+                    data.map(item => (
                         <div className="ZayavkaСontant">
                             <div className="ZayavkaOne">
                                 <div className="ZayavkaOneContainer">
                                     <div className="ZOCName">
                                         <form>
                                             <label htmlFor="name">Familiya</label>
-                                            <input type="text" id="familiya" name="familiya" value={formData.familiya} onChange={handleChange} />
+                                            <input type="text" id="familiya" name="familiya" />
                                         </form>
                                         <form>
                                             <label htmlFor="name">Ismi</label>
@@ -143,7 +123,6 @@ export default function Zayavka() {
                                     <div className="ZOCtable">
                                         <BasicTable />
                                     </div>
-
                                     <div className="ZOCFail">
                                         <form method="post">
                                             <p>Sertifikat fayl</p>
@@ -202,7 +181,6 @@ export default function Zayavka() {
                                             </label>
                                         </form>
                                     </div>
-
                                     <div className="ZOCJonatish">
                                         <form>
                                             <label type="submit" name="submit-button"><p>Jonatish</p><input type="submit" /></label>
@@ -211,9 +189,9 @@ export default function Zayavka() {
                                 </div>
                             </div>
                         </div>
-                    </div>
-                })
-            }
+                    ))
+                }
+            </div>
         </div>
     )
 }

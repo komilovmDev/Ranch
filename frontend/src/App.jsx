@@ -40,7 +40,6 @@ function App() {
           <Route path='/Abiturient/Ikkinchi' element={<Kunduzgi/>} />
           <Route path='/Abiturient/Qochirish' element={<Kunduzgi/>} />
           <Route path='/online-hujjat-topshirish/:id' element={<Zayavka/>} />
-          
         </Routes>
         <Footer />
       </Router>
