@@ -35,4 +35,5 @@ aside {
     width: 20vw;
     height: 20vw;
     object-fit: cover;
+    border-radius: 6px;
 }
