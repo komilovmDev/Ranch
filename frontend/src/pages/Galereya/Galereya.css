@@ -1,0 +1,20 @@
+.Galereya {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.GalereyaContainer {
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.GalereyaContant {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+

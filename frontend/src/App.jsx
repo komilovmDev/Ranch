@@ -15,6 +15,7 @@ import Fhamkor from './pages/Faoliyat/Fhamkor';
 import Yoshlar from './pages/Faoliyat/Yoshlar/Yoshlar';
 import Kunduzgi from './pages/Abiturient/Kunduzgi/Kunduzgi';
 import Zayavka from './pages/Abiturient/Zayafka/Zayavka';
+import Galereya from './pages/Galereya/Galereya';
 
 function App() {
 
@@ -40,6 +41,7 @@ function App() {
           <Route path='/Abiturient/Ikkinchi' element={<Kunduzgi/>} />
           <Route path='/Abiturient/Qochirish' element={<Kunduzgi/>} />
           <Route path='/online-hujjat-topshirish/:id' element={<Zayavka/>} />
+          <Route path='/galireryalar/:id' element={<Galereya/>} />
         </Routes>
         <Footer />
       </Router>
