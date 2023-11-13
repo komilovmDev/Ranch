@@ -5,7 +5,7 @@ import {RiBankLine} from 'react-icons/ri'
 import {AiOutlineRight} from 'react-icons/ai'
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-
+import zvezda from '../../pages/Home/HomeAssets/IMG/zvezda.png';
 
 export default function Galereya() {
 
@@ -36,7 +36,7 @@ export default function Galereya() {
                         <div className="AsideLink">
                             {
                                 catData.map(item => (
-                                    <Link>{item.name}</Link>
+                                    <Link><img src={zvezda} alt="" />{item.name}</Link>
                                 ))
                             }
                         </div>
