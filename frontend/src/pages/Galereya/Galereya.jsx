@@ -3,9 +3,23 @@ import { Link } from "react-router-dom";
 import img from "./../Home/HomeAssets/IMG/Ranch_Zdanie.png";
 import {RiBankLine} from 'react-icons/ri'
 import {AiOutlineRight} from 'react-icons/ai'
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 
 
 export default function Galereya() {
+
+    const [catData , setCatData] = useState([])
+    const getcategoryGallary = async () => {
+        const response = await axios.get(`https://utu-ranch.uz/api/all/cat/gal/`)
+        setCatData(response.data)
+        console.log(response.data);
+    }
+
+    useEffect(() => {
+        getcategoryGallary()
+    },[])
+
     return (
         <div className="Galereya">
             <div className="GalereyaContainer">
@@ -20,12 +34,11 @@ export default function Galereya() {
                     <aside>
                         <p>Discover</p>
                         <div className="AsideLink">
-                            <Link>Imkoniyatlar</Link>
-                            <Link>Masofaviy ta’lim</Link>
-                            <Link>Talabalar hayoti</Link>
-                            <Link>Code Craft</Link>
-                            <Link>Bitiruvchilar hikoyalari</Link>
-                            <Link>Kibersport</Link>
+                            {
+                                catData.map(item => (
+                                    <Link>{item.name}</Link>
+                                ))
+                            }
                         </div>
                     </aside>
                     <div className="GalereyaCont">
