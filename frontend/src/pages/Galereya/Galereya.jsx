@@ -32,7 +32,7 @@ export default function Galereya() {
                 </div>
                 <div className="GalereyaContant">
                     <aside>
-                        <p>Discover</p>
+                        <p className='TitleAside'>Discover</p>
                         <div className="AsideLink">
                             {
                                 catData.map(item => (
