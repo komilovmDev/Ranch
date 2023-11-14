@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+.OchMalumot {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 6.5vw;
+    margin-bottom: 2vw;
+    padding-top: 1.56vw;
+    font-family: "Montserrat", sans-serif;
+}
+
+.OchMalumotContainer {
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+}
+
+.OchMalumotContent {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vw;
+}
+
+.OchMalumotContent p {
+    margin: 0;
+    padding: 0;
+    font-size: 1.7vw;
+    font-weight: 700;
+    color: #575757;
+}
