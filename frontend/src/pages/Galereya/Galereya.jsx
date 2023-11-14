@@ -1,24 +1,53 @@
 import './Galereya.css';
 import { Link } from "react-router-dom";
-import img from "./../Home/HomeAssets/IMG/Ranch_Zdanie.png";
-import {RiBankLine} from 'react-icons/ri'
-import {AiOutlineRight} from 'react-icons/ai'
+import { RiBankLine } from 'react-icons/ri';
+import { AiOutlineRight } from 'react-icons/ai';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import zvezda from '../../pages/Home/HomeAssets/IMG/zvezda.png';
 
 export default function Galereya() {
+    const [catData, setCatData] = useState([]);
+    const [selectedCategory, setSelectedCategory] = useState(null);
+    const [images, setImages] = useState([]);
 
-    const [catData , setCatData] = useState([])
     const getcategoryGallary = async () => {
-        const response = await axios.get(`https://utu-ranch.uz/api/all/cat/gal/`)
-        setCatData(response.data)
-        console.log(response.data);
+        try {
+            const response = await axios.get(`https://utu-ranch.uz/api/all/cat/gal/`);
+            setCatData(response.data);
+            console.log(response.data);
+
+            // Set the selected category to the first category by default
+            if (response.data.length > 0) {
+                setSelectedCategory(response.data[0].id);
+            }
+        } catch (error) {
+            console.error("Error fetching categories:", error);
+        }
+    }
+
+    const getImages = async (categoryId) => {
+        try {
+            const response = await axios.get(`https://utu-ranch.uz/api/gal/${categoryId}/`);
+            setImages(response.data);
+        } catch (error) {
+            console.error("Error fetching images:", error);
+        }
     }
 
     useEffect(() => {
-        getcategoryGallary()
-    },[])
+        getcategoryGallary();
+    }, []);
+
+    useEffect(() => {
+        if (selectedCategory !== null) {
+            getImages(selectedCategory);
+        }
+    }, [selectedCategory]);
+
+    const handleCategoryClick = (categoryId) => {
+        setSelectedCategory(categoryId);
+    }
 
     return (
         <div className="Galereya">
@@ -34,46 +63,25 @@ export default function Galereya() {
                     <aside>
                         <p className='TitleAside'>Discover</p>
                         <div className="AsideLink">
-                            {
-                                catData.map(item => (
-                                    <Link><img src={zvezda} alt="" />{item.name}</Link>
-                                ))
-                            }
+                            {catData.map(item => (
+                                <Link key={item.id} onClick={() => handleCategoryClick(item.id)}>
+                                    <img src={zvezda} alt="" />
+                                    {item.name}
+                                </Link>
+                            ))}
                         </div>
                     </aside>
                     <div className="GalereyaCont">
                         <div className="GalleryContImgBox">
-                            <div className="imgBox">
-                                <img src={img} alt="" />
-                            </div>
-                            <div className="imgBox">
-                                <img src={img} alt="" />
-                            </div>
-                            <div className="imgBox">
-                                <img src={img} alt="" />
-                            </div>
-                            <div className="imgBox">
-                                <img src={img} alt="" />
-                            </div>
-                            <div className="imgBox">
-                                <img src={img} alt="" />
-                            </div>
-                            <div className="imgBox">
-                                <img src={img} alt="" />
-                            </div>
-                            <div className="imgBox">
-                                <img src={img} alt="" />
-                            </div>
-                            <div className="imgBox">
-                                <img src={img} alt="" />
-                            </div>
-                            <div className="imgBox">
-                                <img src={img} alt="" />
-                            </div>
+                            {images.map(item => (
+                                <div key={item.id} className="imgBox">
+                                    <img src={item.image} alt="" />
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    )
+    );
 }
