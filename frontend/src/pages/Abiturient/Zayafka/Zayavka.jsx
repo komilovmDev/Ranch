@@ -183,7 +183,7 @@ export default function Zayavka() {
                                     </div>
                                     <div className="ZOCJonatish">
                                         <form>
-                                            <label type="submit" name="submit-button"><p>Jonatish</p><input type="submit" /></label>
+                                            <label type="submit" className="submit-button"><p>Jonatish</p><input type="submit" /></label>
                                         </form>
                                     </div>
                                 </div>

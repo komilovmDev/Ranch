@@ -26,22 +26,22 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/:slug/:id' element={<News />} />
-          <Route path='/New' element={<NewsPage/>} />
-          <Route path='/:slug/:id' element={<Markaz/>} />
-          <Route path='/:slug/:id' element={<Kafedra/>} />
-          <Route path='/IchqiTartib' element={<Koidaich/>} />
-          <Route path='/Odob' element={<OdobPage/>} />
-          <Route path='/University/Nizom' element={<Nizom/>} />
-          <Route path='/University/Universitet_haqida' element={<Uhaqida/>} />
-          <Route path='/Faoliyat/Hamkor' element={<Fhamkor/>} />
-          <Route path='/Faoliyat/Yoshlar' element={<Yoshlar/>} />
-          <Route path='/Kunduzgi-talim-yonalishlari/:id' element={<Kunduzgi/>} />
-          <Route path='/Abiturient/Sirtiq' element={<Kunduzgi/>} />
-          <Route path='/Abiturient/Magistr' element={<Kunduzgi/>} />
-          <Route path='/Abiturient/Ikkinchi' element={<Kunduzgi/>} />
-          <Route path='/Abiturient/Qochirish' element={<Kunduzgi/>} />
-          <Route path='/online-hujjat-topshirish/:id' element={<Zayavka/>} />
-          <Route path='/galireryalar/:id' element={<Galereya/>} />
+          <Route path='/New' element={<NewsPage />} />
+          <Route path='/:slug/:id' element={<Markaz />} />
+          <Route path='/:slug/:id' element={<Kafedra />} />
+          <Route path='/IchqiTartib' element={<Koidaich />} />
+          <Route path='/Odob' element={<OdobPage />} />
+          <Route path='/University/Nizom' element={<Nizom />} />
+          <Route path='/University/Universitet_haqida' element={<Uhaqida />} />
+          <Route path='/Faoliyat/Hamkor' element={<Fhamkor />} />
+          <Route path='/Faoliyat/Yoshlar' element={<Yoshlar />} />
+          <Route path='/Kunduzgi-talim-yonalishlari/:id' element={<Kunduzgi />} />
+          <Route path='/Abiturient/Sirtiq' element={<Kunduzgi />} />
+          <Route path='/Abiturient/Magistr' element={<Kunduzgi />} />
+          <Route path='/Abiturient/Ikkinchi' element={<Kunduzgi />} />
+          <Route path='/Abiturient/Qochirish' element={<Kunduzgi />} />
+          <Route path='/online-hujjat-topshirish/:id' element={<Zayavka />} />
+          <Route path='/galireryalar/:id' element={<Galereya />} />
         </Routes>
         <Footer />
       </Router>
