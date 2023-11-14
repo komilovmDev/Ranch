@@ -10,24 +10,6 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 
 export default function Navbar() {
-  //Navbar Fixed
-  const [navClass, setNavClass] = useState("Navbar__Container");
-
-  function FixedNav() {
-    const scrollY = window.scrollY; // Scroll y positionni hozir funksiya ichida olishimiz kerak
-    if (scrollY > 200) {
-      setNavClass("Navbar__Container fixed");
-    } else {
-      setNavClass("Navbar__Container"); // Scroll 200 dan kam bo'lsa fixed klassini olib tashlash
-    }
-  }
-
-  useEffect(() => {
-    window.addEventListener("scroll", FixedNav); // scroll hodisasini eshitamiz
-    return () => {
-      window.removeEventListener("scroll", FixedNav); // komponent ochirilganda eshitamizni to'xtatamiz
-    };
-  }, []);
 
   // categores
 
@@ -48,7 +30,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <div className={navClass} id="Navbar">
+    <div className="Navbar" id="Navbar">
       <div className="NavContainer">
         <div className="NavUp">
           <div className="LogBut">
