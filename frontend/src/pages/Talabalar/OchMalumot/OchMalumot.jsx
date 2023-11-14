@@ -2,6 +2,7 @@ import './OchMalumot.css';
 import { Link } from "react-router-dom";
 import { RiBankLine } from 'react-icons/ri';
 import { AiOutlineRight } from 'react-icons/ai';
+import img from './../Talimg/seminar-1024x576 1.png';
 import axios from 'axios';
 
 export default function OchMalumot() {
@@ -24,64 +25,55 @@ export default function OchMalumot() {
                     <div className="OMCBoxObsh">
                         <div className="OMCBox">
                             <div className="imgBoxOMC">
-                                <img src="" alt="" />
+                                <img src={img} alt="" />
                             </div>
                             <div className="TextBoxOMC">
-                                <p>Dekabir 6, 2022</p>
+                                <h4>Dekabir 6, 2022</h4>
                                 <p> O‘zbekiston Respublikasi Konstitutsiyasining mazmun-mohiyatini tushuntirish bo‘yicha seminar ...</p>
                             </div>
                         </div>
                         <div className="OMCBox">
                             <div className="imgBoxOMC">
-                                <img src="" alt="" />
+                                <img src={img} alt="" />
                             </div>
                             <div className="TextBoxOMC">
-                                <p>Dekabir 6, 2022</p>
+                                <h4>Dekabir 6, 2022</h4>
                                 <p> O‘zbekiston Respublikasi Konstitutsiyasining mazmun-mohiyatini tushuntirish bo‘yicha seminar ...</p>
                             </div>
                         </div>
                         <div className="OMCBox">
                             <div className="imgBoxOMC">
-                                <img src="" alt="" />
+                                <img src={img} alt="" />
                             </div>
                             <div className="TextBoxOMC">
-                                <p>Dekabir 6, 2022</p>
+                                <h4>Dekabir 6, 2022</h4>
                                 <p> O‘zbekiston Respublikasi Konstitutsiyasining mazmun-mohiyatini tushuntirish bo‘yicha seminar ...</p>
                             </div>
                         </div>
                         <div className="OMCBox">
                             <div className="imgBoxOMC">
-                                <img src="" alt="" />
+                                <img src={img} alt="" />
                             </div>
                             <div className="TextBoxOMC">
-                                <p>Dekabir 6, 2022</p>
+                                <h4>Dekabir 6, 2022</h4>
                                 <p> O‘zbekiston Respublikasi Konstitutsiyasining mazmun-mohiyatini tushuntirish bo‘yicha seminar ...</p>
                             </div>
                         </div>
                         <div className="OMCBox">
                             <div className="imgBoxOMC">
-                                <img src="" alt="" />
+                                <img src={img} alt="" />
                             </div>
                             <div className="TextBoxOMC">
-                                <p>Dekabir 6, 2022</p>
+                                <h4>Dekabir 6, 2022</h4>
                                 <p> O‘zbekiston Respublikasi Konstitutsiyasining mazmun-mohiyatini tushuntirish bo‘yicha seminar ...</p>
                             </div>
                         </div>
                         <div className="OMCBox">
                             <div className="imgBoxOMC">
-                                <img src="" alt="" />
+                                <img src={img} alt="" />
                             </div>
                             <div className="TextBoxOMC">
-                                <p>Dekabir 6, 2022</p>
-                                <p> O‘zbekiston Respublikasi Konstitutsiyasining mazmun-mohiyatini tushuntirish bo‘yicha seminar ...</p>
-                            </div>
-                        </div>
-                        <div className="OMCBox">
-                            <div className="imgBoxOMC">
-                                <img src="" alt="" />
-                            </div>
-                            <div className="TextBoxOMC">
-                                <p>Dekabir 6, 2022</p>
+                                <h4>Dekabir 6, 2022</h4>
                                 <p> O‘zbekiston Respublikasi Konstitutsiyasining mazmun-mohiyatini tushuntirish bo‘yicha seminar ...</p>
                             </div>
                         </div>
