@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+
+.Talabalarga {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 1.56vw;
+    margin-top: 6.5vw;
+    margin-bottom: 2vw;
+    font-family: "Montserrat", sans-serif;
+}
+
+.TalabalargaContainer {
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 2vw;
+}

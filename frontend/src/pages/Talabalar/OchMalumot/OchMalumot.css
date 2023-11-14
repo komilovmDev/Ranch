@@ -42,7 +42,7 @@
 
 .OMCBox {
     width: 21vw;
-    height: 15vw;
+    height: auto;
     display: flex;
     flex-direction: column;
     gap: .5vw;
@@ -72,13 +72,16 @@
     font-size: 0.7vw;
     color: #3E3E3E;
     font-weight: 500;
+    word-wrap: break-word;
 }
 
 .TextBoxOMC h4{
     padding: 0;
     margin: 0;
+    width: 100%;
     font-size: 1vw;
     color: #FF6400;
     font-weight: 600;
+    word-wrap: break-word;
 }
 
