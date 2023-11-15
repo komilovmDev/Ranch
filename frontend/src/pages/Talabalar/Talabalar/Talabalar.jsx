@@ -3,6 +3,9 @@ import axios from 'axios';
 import { RiBankLine } from 'react-icons/ri';
 import { AiOutlineRight } from 'react-icons/ai';
 import { useParams, Link } from 'react-router-dom';
+import "./Talabalar.css";
+import book from './../Talimg/Vector (1).svg';
+import dwndl from './../Talimg/Vector.svg';
 
 
 export default function Talabalarga() {
@@ -49,19 +52,26 @@ export default function Talabalarga() {
                                     {
                                         data.map(info => (
                                             <>
-                                                <div className="TalabalarText">
-                                                    <h1></h1>
-                                                </div>
-                                                <Link>
-                                                    <div className="TalabalarButton">
-                                                        <div className="TalabalarButtonImg">
-                                                            <img src="" alt="" />
-                                                        </div>
-                                                        <div className="TalabalarButtonHref">
-                                                            <p>Fayl yuklash</p>
-                                                        </div>
+                                                <div className="TalabalarObshhhh">
+                                                    <div className="TalabalarLeft">
+                                                        <img src={book} alt="" />
                                                     </div>
-                                                </Link>
+                                                    <div className="TalabalarRight">
+                                                        <div className="TalabalarText">
+                                                            <p>{item.title}</p>
+                                                        </div>
+                                                        <Link>
+                                                            <div className="TalabalarButton">
+                                                                <div className="TalabalarButtonImg">
+                                                                    <img src={dwndl} alt="" />
+                                                                </div>
+                                                                <div className="TalabalarButtonHref">
+                                                                    <p>Fayl yuklash</p>
+                                                                </div>
+                                                            </div>
+                                                        </Link>
+                                                    </div>
+                                                </div>
                                             </>
                                         ))
                                     }
