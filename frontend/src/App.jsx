@@ -17,7 +17,7 @@ import Kunduzgi from './pages/Abiturient/Kunduzgi/Kunduzgi';
 import Zayavka from './pages/Abiturient/Zayafka/Zayavka';
 import Galereya from './pages/Galereya/Galereya';
 import OchMalumot from './pages/Talabalar/OchMalumot/OchMalumot';
-import Talabalarga from './pages/Talabalar/Talabalar/Talabalar';
+import Talabalarga from './pages/Talabalar/Talabalar/Talabalar.jsx';
 
 function App() {
 
@@ -46,7 +46,7 @@ function App() {
             <Route path='/online-hujjat-topshirish/:id' element={<Zayavka />} />
             <Route path='/galireryalar/:id' element={<Galereya />} />
             <Route path='/ochiq-malumot/:id' element={<OchMalumot/>} />
-            <Route path='/talaba/:id' element={<Talabalarga/>} />
+            <Route path='/talabalar/:id' element={<Talabalarga/>} />
           </Routes>
           <Footer />
         </Router>
