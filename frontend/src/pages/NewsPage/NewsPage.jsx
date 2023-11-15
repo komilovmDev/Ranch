@@ -45,7 +45,7 @@ export default function NewsPage() {
 
                 <div className="NewsPageContant">
                     <div className="NewsPageContantTitle">
-                        <h1>{data.title}</h1> {/* Assuming there is a 'title' property in your data */}
+                        <p>{data.title}</p> {/* Assuming there is a 'title' property in your data */}
                     </div>
 
                     <div className="NewsPageContantBox">

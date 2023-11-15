@@ -13,15 +13,20 @@
 
 .NewsPageContainer {
     width: 70vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .NewsPageContantBox {
+    width: 100%;
     display: flex;
     gap: 1vw;
 }
 
 .NewsPageContantTitle {
     font-style: normal;
+    font-size: 1.5vw;
     font-weight: 700;
     line-height: normal;
     text-transform: uppercase;
@@ -29,7 +34,7 @@
 }
 
 .NewsPageContantBoxImg {
-    width: 100vw;
+    width: 35vw;
     height: auto;
     border-radius: .625vw;
     overflow: hidden;
@@ -42,10 +47,16 @@
 }
 
 .NewsPageContantBoxText {
+    width: 35vw;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     font-size: .833vw;
     font-weight: 500;
     color: #3E3E3E;
+}
+
+.NewsPageContantBoxText p {
+    padding: 0;
+    margin: 0;
 }
