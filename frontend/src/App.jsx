@@ -46,7 +46,7 @@ function App() {
             <Route path='/online-hujjat-topshirish/:id' element={<Zayavka />} />
             <Route path='/galireryalar/:id' element={<Galereya />} />
             <Route path='/ochiq-malumot/:id' element={<OchMalumot/>} />
-            <Route path='/talabalar/:id' element={<Talabalarga/>} />
+            <Route path='/talaba/:id' element={<Talabalarga/>} />
           </Routes>
           <Footer />
         </Router>

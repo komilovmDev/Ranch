@@ -2,9 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { RiBankLine } from 'react-icons/ri';
 import { AiOutlineRight } from 'react-icons/ai';
-import axios from 'axios'
-import { useEffect, useState } from "react";
-
+import { useParams, Link } from 'react-router-dom';
 
 
 export default function Talabalarga() {
@@ -42,27 +40,31 @@ export default function Talabalarga() {
                 </div>
                 <div className="TalabalarContent">
                     {
-                        data.map(item => (
+                        alldata.map(item => (
                             <div key={item.id} className="TalabalarFile">
-
                                 <div className="TalabalarPng">
 
                                 </div>
                                 <div className="TalabaButtonObsh">
-                                    <div className="TalabalarText">
-                                        <h1>{item.title}</h1>
-
-                                    </div>
-                                    <Link>
-                                        <div className="TalabalarButton">
-                                            <div className="TalabalarButtonImg">
-                                                <img src="" alt="" />
-                                            </div>
-                                            <div className="TalabalarButtonHref">
-                                                <p>Fayl yuklash</p>
-                                            </div>
-                                        </div>
-                                    </Link>
+                                    {
+                                        data.map(info => (
+                                            <>
+                                                <div className="TalabalarText">
+                                                    <h1></h1>
+                                                </div>
+                                                <Link>
+                                                    <div className="TalabalarButton">
+                                                        <div className="TalabalarButtonImg">
+                                                            <img src="" alt="" />
+                                                        </div>
+                                                        <div className="TalabalarButtonHref">
+                                                            <p>Fayl yuklash</p>
+                                                        </div>
+                                                    </div>
+                                                </Link>
+                                            </>
+                                        ))
+                                    }
                                 </div>
                             </div>
                         ))
