@@ -28,8 +28,10 @@ function App() {
           <Navbar />
           <Routes>
             <Route path='/' element={<Home />} />
-            <Route path='/:slug/:id' element={<News />} />
-            <Route path='/New' element={<NewsPage />} />
+            <Route path='/ommaviy-tadbirlar/:id' element={<News />} />
+            <Route path='/universitet33/:id' element={<News />} />
+            <Route path='/xalqoro-aloqalar/:id' element={<News />} />
+            <Route path='/yanglik-toliq/:id' element={<NewsPage />} />
             <Route path='/:slug/:id' element={<Markaz />} />
             <Route path='/:slug/:id' element={<Kafedra />} />
             <Route path='/IchqiTartib' element={<Koidaich />} />

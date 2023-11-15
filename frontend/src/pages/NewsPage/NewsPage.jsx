@@ -1,51 +1,64 @@
 import './NewsPage.css';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { RiBankLine } from 'react-icons/ri';
 import { AiOutlineRight } from 'react-icons/ai';
 import Pic1 from './../News/NewsAssets/img/pic1 1.png';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 
 export default function NewsPage() {
+    const { id } = useParams();
+    const [data, setData] = useState({});
+    const [loading, setLoading] = useState(true);
+
+    const getNews = async () => {
+        try {
+            const response = await axios.get(`https://utu-ranch.uz/api/yangiliklar/${id}/`);
+            setData(response.data);
+            console.log(response.data);
+        } catch (error) {
+            console.error("Error fetching news:", error);
+            // Handle the error
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    useEffect(() => {
+        getNews();
+    }, [id]);
+
+    if (loading) {
+        return <p>Loading...</p>;
+    }
+
     return (
         <div className="NewsPage">
-            <div className="NewsPageContainer">
+            <div className="NewsPageContainer" key={data.id}>
                 <div className="NewsTitleLine">
                     <Link className='NewsTitleLineIcon' to={'/'}><RiBankLine /></Link>
-                    <AiOutlineRight className='Iconright'/>
+                    <AiOutlineRight className='Iconright' />
                     <Link className='NewsTitleLineText' to={'/News'}>Yangiliklar</Link>
-                    <AiOutlineRight className='Iconright'/>
-                    <p>Qabul 2023-2024</p>
+                    <AiOutlineRight className='Iconright' />
+                    <p>{data.title}</p> {/* Assuming there is a 'title' property in your data */}
                 </div>
 
                 <div className="NewsPageContant">
                     <div className="NewsPageContantTitle">
-                        <h1>Qabul 2023-2024</h1>
+                        <h1>{data.title}</h1> {/* Assuming there is a 'title' property in your data */}
                     </div>
 
                     <div className="NewsPageContantBox">
                         <div className="NewsPageContantBoxImg">
-                            <img src={Pic1} alt="" />
+                            <img src={data.image} alt="" />
                         </div>
                         <div className="NewsPageContantBoxText">
-                            <p>Urganch RANCH Texnologiya Universitetida 2023-2024 o'quv yillari uchun qabul davom etmoqda.<br />
-                                Qabul davomida Siz 14 ta ta'lim yo'nalishi bo'yicha talaba bo'lish imkoniyatiga ega bolasiz.</p>
-                            <p>
-                                Universitetimizda Siz o'qishni:<br />
-                                <br />
-                                ▫️ kunduzgi<br />
-                                ▫️ sirtqi<br />
-                                ▫️ magistratura<br />
-                                ▫️ ikkinchi mutaxassislik<br />
-                                <br />
-                                ta'lim shakllarini tanlashingiz mumkin.Universitetimizda kontrakt summalari 12 mln dan boshlandi<br />
-                            </p>
-                            <p>
-                                Universitetimizda qabul suhbat asosida qabul qilinadi qabulimizga shoshiling va talaba bolish imkoniyatini
-                                qo'ldan boy bermang!
-                            </p>
+                            <p>{data.desc}</p> {/* Assuming there is a 'description' property in your data */}
+                            {/* Additional data rendering goes here */}
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    )
+    );
 }

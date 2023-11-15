@@ -1,89 +1,68 @@
 import './News.css';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { RiBankLine } from 'react-icons/ri';
 import { AiOutlineRight } from 'react-icons/ai';
 import pic1 from './NewsAssets/img/pic1 1.png';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 
 export default function News() {
+
+    const { id } = useParams()
+    const [data, setData] = useState([])
+    const getNews = async () => {
+        const response = await axios.get(`https://utu-ranch.uz/api/yangilik/${id}/`)
+        setData(response.data)
+        console.log(response.data);
+    }
+
+    useEffect(() => {
+        getNews()
+    }, [id])
+
+    const [newsInfo, setnewsInfo] = useState([])
+    const getNewsPage = async () => {
+        const response = await axios.get(`https://utu-ranch.uz/api/content/${id}/`)
+        setnewsInfo(response.data)
+        console.log(response.data);
+    }
+
+    useEffect(() => {
+        getNewsPage()
+    }, [id])
+
+
     return (
         <div className="News">
-            <div className="NewsContainer">
-                <div className="NewsTitleLine">
-                    <Link className='NewsTitleLineIcon' to={'/'}><RiBankLine /></Link>
-                    <AiOutlineRight />
-                    <Link className='NewsTitleLineText' to={'/News'}>Yangiliklar</Link>
-                    <AiOutlineRight />
-                </div>
-                <div className="NewsBloks">
-                    <Link to={'/New'}>
-                        <div className="NewsBlok">
-                            <div className="NewsBlokImg">
-                                <img src={pic1} alt="" />
-                            </div>
-                            <div className="NewsBlokText">
-                                <h4>Qabul 2023 2024</h4>
-                                <p>Urganch RANCH Texnologiya Universitetida 2023-2024 o'quv yillari uchun qabul davom etmoqda. ...</p>
-                            </div>
+            {
+                newsInfo.map(item => (
+                    <div className="NewsContainer" key={item.id}>
+                        <div className="NewsTitleLine">
+                            <Link className='NewsTitleLineIcon' to={'/'}><RiBankLine /></Link>
+                            <AiOutlineRight />
+                            <Link className='NewsTitleLineText' to={'/News'}>Yangiliklar</Link>
+                            <AiOutlineRight />
                         </div>
-                    </Link>
-                    <Link to={'/New'}>
-                        <div className="NewsBlok">
-                            <div className="NewsBlokImg">
-                                <img src={pic1} alt="" />
-                            </div>
-                            <div className="NewsBlokText">
-                                <h4>Qabul 2023 2024</h4>
-                                <p>Urganch RANCH Texnologiya Universitetida 2023-2024 o'quv yillari uchun qabul davom etmoqda. ...</p>
-                            </div>
+                        <div className="NewsBloks">
+                            {
+                                data.map(item => (
+                                    <Link to={`/yanglik-toliq/${item.id}`}>
+                                        <div className="NewsBlok">
+                                            <div className="NewsBlokImg">
+                                                <img src={item.image} alt="" />
+                                            </div>
+                                            <div className="NewsBlokText">
+                                                <h4>{item.title}</h4>
+                                                <p>{item.mini_desc}</p>
+                                            </div>
+                                        </div>
+                                    </Link>
+                                ))
+                            }
                         </div>
-                    </Link>
-                    <Link to={'/New'}>
-                        <div className="NewsBlok">
-                            <div className="NewsBlokImg">
-                                <img src={pic1} alt="" />
-                            </div>
-                            <div className="NewsBlokText">
-                                <h4>Qabul 2023 2024</h4>
-                                <p>Urganch RANCH Texnologiya Universitetida 2023-2024 o'quv yillari uchun qabul davom etmoqda. ...</p>
-                            </div>
-                        </div>
-                    </Link>
-                    <Link to={'/New'}>
-                        <div className="NewsBlok">
-                            <div className="NewsBlokImg">
-                                <img src={pic1} alt="" />
-                            </div>
-                            <div className="NewsBlokText">
-                                <h4>Qabul 2023 2024</h4>
-                                <p>Urganch RANCH Texnologiya Universitetida 2023-2024 o'quv yillari uchun qabul davom etmoqda. ...</p>
-                            </div>
-                        </div>
-                    </Link>
-                    <Link to={'/New'}>
-                        <div className="NewsBlok">
-                            <div className="NewsBlokImg">
-                                <img src={pic1} alt="" />
-                            </div>
-                            <div className="NewsBlokText">
-                                <h4>Qabul 2023 2024</h4>
-                                <p>Urganch RANCH Texnologiya Universitetida 2023-2024 o'quv yillari uchun qabul davom etmoqda. ...</p>
-                            </div>
-                        </div>
-                    </Link>
-                    <Link to={'/New'}>
-                        <div className="NewsBlok">
-                            <div className="NewsBlokImg">
-                                <img src={pic1} alt="" />
-                            </div>
-                            <div className="NewsBlokText">
-                                <h4>Qabul 2023 2024</h4>
-                                <p>Urganch RANCH Texnologiya Universitetida 2023-2024 o'quv yillari uchun qabul davom etmoqda. ...</p>
-                            </div>
-                        </div>
-                    </Link>
-                </div>
-
-            </div>
+                    </div>
+                ))
+            }
         </div>
     )
 }
