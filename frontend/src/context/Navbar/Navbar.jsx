@@ -8,6 +8,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import Burger from "./Burger";
 
 export default function Navbar() {
 
@@ -30,75 +31,76 @@ export default function Navbar() {
   }, []);
 
   return (
-    <div className="Navbar" id="Navbar">
-      <div className="NavContainer">
-        <div className="NavUp">
-          <div className="LogBut">
-            <Link to={"/"}>
-              <img src={logo} alt="png" />
-            </Link>
-            <button> Murojat uchun </button>
-          </div>
-          <div className="LabInp">
-            <label htmlFor="">
-              <input type="search" placeholder="Qidirish" />{" "}
-              <button type="submit">
-                <AiOutlineSearch />
-              </button>
-            </label>
-          </div>
-          <div className="TelEmail">
-            <div className="Tel">
-              <img src={phone} alt="" />
-              <a href="tel:+998622277772">62 227 77 72</a>
-            </div>
-            <div className="Email">
-              <img src={email} alt="" />
-              <a href="mailto:university@utu-ranch.uz">
-                university@utu-ranch.uz
-              </a>
-            </div>
-          </div>
-          <div className="ButLang">
-            <button>Kirish</button>
-            <select name="lang" id="lang">
-              <option value="en">
-                <button>UZ</button>
-              </option>
-              <option value="en">
-                <button>RU</button>
-              </option>
-              <option value="en">
-                <button>EN</button>
-              </option>
-            </select>
-          </div>
-        </div>
-        <div className="NavDown">
-          {categors.map((category) => (
-            // eslint-disable-next-line react/jsx-key
-            <div className="dropdown">
-              <Link>
-                <button className="dropbtn">{category.name}</button>
+    <>
+      <div className="Navbar" id="Navbar">
+        <div className="NavContainer">
+          <div className="NavUp">
+            <div className="LogBut">
+              <Link to={"/"}>
+                <img src={logo} alt="png" />
               </Link>
-              <div className="dropdown-content">
-                <div className="DropButtonLink">
-                  {category.children.map((item) => (
-                    // eslint-disable-next-line react/jsx-key
-                    <Link to={`/${item.slug}/${item.id}`}>
-                      <div className="LinkBox">
-                        <p>{item.name}</p>{" "}
-                        <button className="ButtonChek">
-                          <AiOutlineCheck />
-                        </button>
-                      </div>
-                    </Link>
-                  ))}
-                </div>
+              <button> Murojat uchun </button>
+            </div>
+            <div className="LabInp">
+              <label htmlFor="">
+                <input type="search" placeholder="Qidirish" />{" "}
+                <button type="submit">
+                  <AiOutlineSearch />
+                </button>
+              </label>
+            </div>
+            <div className="TelEmail">
+              <div className="Tel">
+                <img src={phone} alt="" />
+                <a href="tel:+998622277772">62 227 77 72</a>
+              </div>
+              <div className="Email">
+                <img src={email} alt="" />
+                <a href="mailto:university@utu-ranch.uz">
+                  university@utu-ranch.uz
+                </a>
               </div>
             </div>
-          ))}
-          {/* <div className="dropdown">
+            <div className="ButLang">
+              <button>Kirish</button>
+              <select name="lang" id="lang">
+                <option value="en">
+                  <button>UZ</button>
+                </option>
+                <option value="en">
+                  <button>RU</button>
+                </option>
+                <option value="en">
+                  <button>EN</button>
+                </option>
+              </select>
+            </div>
+          </div>
+          <div className="NavDown">
+            {categors.map((category) => (
+              // eslint-disable-next-line react/jsx-key
+              <div className="dropdown">
+                <Link>
+                  <button className="dropbtn">{category.name}</button>
+                </Link>
+                <div className="dropdown-content">
+                  <div className="DropButtonLink">
+                    {category.children.map((item) => (
+                      // eslint-disable-next-line react/jsx-key
+                      <Link to={`/${item.slug}/${item.id}`}>
+                        <div className="LinkBox">
+                          <p>{item.name}</p>{" "}
+                          <button className="ButtonChek">
+                            <AiOutlineCheck />
+                          </button>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+            {/* <div className="dropdown">
                         <button className="dropbtn">Universitet</button>
                         <div className="dropdown-content" >
                             <div className="DropButtonLink">
@@ -174,8 +176,10 @@ export default function Navbar() {
                             <a href="#">Link 3</a>
                         </div>
                     </div> */}
+          </div>
         </div>
       </div>
-    </div>
+
+    </>
   );
 }

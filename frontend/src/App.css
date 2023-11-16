@@ -4,3 +4,19 @@ body,html {
     box-sizing: border-box;
 }
 
+.Burger {
+    display: none;
+}
+
+@media (max-width:768px) {
+    .Navbar {
+        display: none;
+    }
+
+    .Burger {
+        display: flex;
+        position: fixed;
+        top: 0;
+        z-index: 2;
+    }
+}

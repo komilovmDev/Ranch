@@ -292,3 +292,16 @@
   margin: 0;
   padding: 0;
 }
+#navRes {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  #Navbar {
+    display: none;
+  }
+  #navRes {
+    width: 100%;
+    display: flex;
+  }
+}

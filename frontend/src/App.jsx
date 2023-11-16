@@ -18,6 +18,7 @@ import Zayavka from './pages/Abiturient/Zayafka/Zayavka';
 import Galereya from './pages/Galereya/Galereya';
 import OchMalumot from './pages/Talabalar/OchMalumot/OchMalumot';
 import Talabalarga from './pages/Talabalar/Talabalar/Talabalar.jsx';
+import Burger from './context/Navbar/Burger.jsx';
 
 function App() {
 
@@ -25,7 +26,12 @@ function App() {
     <>
       <div className="AppContainer">
         <Router>
-          <Navbar />
+          <div className="Navbar">
+            <Navbar />
+          </div>
+          <div className="Burger">
+            <Burger />
+          </div>
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/ommaviy-tadbirlar/:id' element={<News />} />
@@ -47,8 +53,8 @@ function App() {
             <Route path='/Abiturient/Qochirish' element={<Kunduzgi />} />
             <Route path='/online-hujjat-topshirish/:id' element={<Zayavka />} />
             <Route path='/galireryalar/:id' element={<Galereya />} />
-            <Route path='/ochiq-malumot/:id' element={<OchMalumot/>} />
-            <Route path='/talaba/:id' element={<Talabalarga/>} />
+            <Route path='/ochiq-malumot/:id' element={<OchMalumot />} />
+            <Route path='/talaba/:id' element={<Talabalarga />} />
           </Routes>
           <Footer />
         </Router>
