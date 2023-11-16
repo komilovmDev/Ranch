@@ -18,6 +18,7 @@ import Zayavka from './pages/Abiturient/Zayafka/Zayavka';
 import Galereya from './pages/Galereya/Galereya';
 import OchMalumot from './pages/Talabalar/OchMalumot/OchMalumot';
 import Talabalarga from './pages/Talabalar/Talabalar/Talabalar.jsx';
+import Rektorat from './pages/University/Rektorat/Rektorat.jsx';
 
 function App() {
 
@@ -49,6 +50,8 @@ function App() {
             <Route path='/galireryalar/:id' element={<Galereya />} />
             <Route path='/ochiq-malumot/:id' element={<OchMalumot/>} />
             <Route path='/talaba/:id' element={<Talabalarga/>} />
+            <Route path='/rektorat/:id' element={<Rektorat/>} />
+
           </Routes>
           <Footer />
         </Router>

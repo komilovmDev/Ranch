@@ -45,9 +45,6 @@ export default function Talabalarga() {
                     {
                         alldata.map(item => (
                             <div key={item.id} className="TalabalarFile">
-                                <div className="TalabalarPng">
-
-                                </div>
                                 <div className="TalabaButtonObsh">
                                     {
                                         data.map(info => (
@@ -58,7 +55,7 @@ export default function Talabalarga() {
                                                     </div>
                                                     <div className="TalabalarRight">
                                                         <div className="TalabalarText">
-                                                            <p>{item.title}</p>
+                                                            <p>{info.title}</p>
                                                         </div>
                                                         <Link>
                                                             <div className="TalabalarButton">
