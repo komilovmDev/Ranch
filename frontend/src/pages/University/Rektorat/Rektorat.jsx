@@ -41,29 +41,30 @@ export default function Rektorat() {
                     <AiOutlineRight className='Iconright' />
                     <p>Rektorat</p>
                 </div>
-                {
-                    alldata.map(item => (
-                        <div key={item.id} className="RektoratContainer">
-                            {/* {
+                <div className="RektoratContant">
+                    {
+                        alldata.map(item => (
+                            <div key={item.id} className="RektoratContContainer ">
+                                {/* {
                                 data.map(info => ( */}
-                                    <div className="RektoratContantObsh">
-                                        <div  className="RektoratBox">
-                                            <div className="RektoratImg">
-                                                <img src={item.rektorimage} alt="" />
-                                            </div>
-                                            <div className="RektoratText">
-                                                <h4>{item.lavozim}</h4>
-                                                <p>{item.desc}</p>
-                                            </div>
+                                <div className="RektoratContantObsh">
+                                    <div className="RektoratBox">
+                                        <div className="RektoratImg">
+                                            <img src={item.rektorimage} alt="" />
+                                        </div>
+                                        <div className="RektoratText">
+                                            <h4>{item.lavozim}</h4>
+                                            <p>{item.desc}</p>
                                         </div>
                                     </div>
+                                </div>
                                 {/* ))
                             } */}
 
-                        </div>
-                    ))
-                }
-
+                            </div>
+                        ))
+                    }
+                </div>
             </div>
         </div>
     )
