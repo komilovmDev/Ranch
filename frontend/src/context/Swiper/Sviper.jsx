@@ -4,9 +4,21 @@ import 'swiper/css/pagination';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import Zdanie from './../../pages/Home/HomeAssets/IMG/Ranch_Zdanie.png'
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 
 
 export default function Sviper() {
+
+    const [data, setData] = useState([])
+    const getBanners = async () => {
+        const response = await axios.get(`https://utu-ranch.uz/api/bannerlar/`)
+        setData(response.data)
+    }
+
+    useEffect(() => {
+        getBanners()
+    }, [])
 
     return (
         <div className='Sviper'>
@@ -21,16 +33,12 @@ export default function Sviper() {
                         }}
                         loop={true}
                         modules={[Autoplay, Navigation]}
-                        >
-                        <SwiperSlide><div className="SliderImgBox"><img src={Zdanie} alt="" /></div></SwiperSlide>
-                        <SwiperSlide><div className="SliderImgBox"><img src={Zdanie} alt="" /></div></SwiperSlide>
-                        <SwiperSlide><div className="SliderImgBox"><img src={Zdanie} alt="" /></div></SwiperSlide>
-                        <SwiperSlide><div className="SliderImgBox"><img src={Zdanie} alt="" /></div></SwiperSlide>
-                        <SwiperSlide><div className="SliderImgBox"><img src={Zdanie} alt="" /></div></SwiperSlide>
-                        <SwiperSlide><div className="SliderImgBox"><img src={Zdanie} alt="" /></div></SwiperSlide>
-                        <SwiperSlide><div className="SliderImgBox"><img src={Zdanie} alt="" /></div></SwiperSlide>
-                        <SwiperSlide><div className="SliderImgBox"><img src={Zdanie} alt="" /></div></SwiperSlide>
-                        <SwiperSlide><div className="SliderImgBox"><img src={Zdanie} alt="" /></div></SwiperSlide>
+                    >
+                        {
+                            data.map(item => (
+                                <SwiperSlide><div className="SliderImgBox"><img src={item.image} alt="" /></div></SwiperSlide>
+                            ))
+                        }
                     </Swiper>
 
                 </div>

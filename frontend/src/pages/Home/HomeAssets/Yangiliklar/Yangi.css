@@ -66,6 +66,8 @@
     border-radius: .5vw;
     overflow: hidden;
     justify-content: space-between;
+    text-decoration: none;
+    list-style-type: none;
 }
 
 .CardImgbox {

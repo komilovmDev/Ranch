@@ -8,6 +8,7 @@ import risfour from './../image/pic1 1.png';
 import { useState, useEffect } from "react";
 import { LuMoveRight } from 'react-icons/lu';
 import axios from "axios";
+import DOMPurify from 'dompurify';
 
 export default function Yangiliklar() {
 
@@ -15,8 +16,8 @@ export default function Yangiliklar() {
     const [data, setData] = useState([])
     const getNews = async () => {
         const response = await axios.get(`https://utu-ranch.uz/api/yangilik/43`)
-        setData(response.data.slice(0,4));
-        console.log(response.data.slice(0,4));
+        setData(response.data.slice(0, 4));
+        console.log(response.data.slice(0, 4));
     }
 
     useEffect(() => {
@@ -34,16 +35,16 @@ export default function Yangiliklar() {
                 <div className="YangilikCards">
                     {
                         data.map(item => (
-                            <Link to={`yanglik-toliq/${item.id}`} key={item.id}>
-                                <div className="YangilikCard">
+                            <div className="YangilikCard" key={item.id}>
+                                <Link to={`yanglik-toliq/${item.id}`}>
                                     <div className="CardImgbox"><img src={item.image} alt="" /></div>
-                                    <div className="Cardtext">
-                                        <h4>{item.title}</h4>
-                                        <p>{item.mini_desc}</p>
-                                    </div>
-                                    <div className="Cardbutton"><Link><button>Batafsil...</button></Link></div>
+                                </Link>
+                                <div className="Cardtext">
+                                    <h4>{item.mini_title}...</h4>
+                                    <p dangerouslySetInnerHTML={{ __html: item.mini_desc}}></p>
                                 </div>
-                            </Link>
+                                <div className="Cardbutton"><Link to={`yanglik-toliq/${item.id}`}><button>Batafsil...</button></Link></div>
+                            </div>
                         ))
                     }
                 </div>
