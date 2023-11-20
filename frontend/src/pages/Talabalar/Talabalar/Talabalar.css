@@ -3,7 +3,7 @@
 
 .Talabalarga {
     width: 100%;
-    height: 30vw;
+    min-height: 30vw;
     display: flex;
     justify-content: center;
     padding-top: 1.56vw;
@@ -89,4 +89,36 @@
     width: 100%;
     height: 100%;
     object-fit: contain;
+}
+
+
+@media screen and (max-width: 768px) {
+    .TalabalargaContainer {
+        width: 90vw;
+    }
+    .TalabaButtonObsh {
+        flex-direction: column;
+    }
+    .TalabalarObshhhh {
+        width: 100%;
+        height: 25vw;
+    }
+    .TalabalarLeft {
+        width: 15vw;
+        height: auto;
+    }
+    .TalabalarRight {
+        margin-left: 10px;
+    }
+    .TalabalarText p {
+        width: auto;
+        font-size: 5vw;
+    }
+    .TalabalarButtonHref p {
+        font-size: 4vw;
+    }
+    .TalabalarButtonImg {
+        width: 5vw;
+        height: 5vw;
+    }
 }
