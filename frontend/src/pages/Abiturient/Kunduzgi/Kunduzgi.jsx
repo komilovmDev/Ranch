@@ -9,7 +9,7 @@ export default function Kunduzgi() {
 
 
     const { id } = useParams()
-    const [data , setData] = useState([])
+    const [data, setData] = useState([])
     const getData = async () => {
         const response = await axios.get(`https://utu-ranch.uz/api/content/${id}/`)
         setData(response.data)
@@ -42,13 +42,17 @@ export default function Kunduzgi() {
                                 <td className='Tretie'>Shartnoma <br /> miqdori</td>
                             </tr>
                         </table>
-                        <table>
-                            <tr className='TableName'>
-                                <td className='Pervoe'>60310100</td>
-                                <td className='Vtoroe'>Iqtisodiyot (tarmoqlar va sohalar bo’yicha)</td>
-                                <td className='Tretie'>17 002 750</td>
-                            </tr>
-                        </table>
+                        {
+                            data.map(item => (
+                                <table>
+                                    <tr className='TableName'>
+                                        <td className='Pervoe'>60310100</td>
+                                        <td className='Vtoroe'>{item.nomi}</td>
+                                        <td className='Tretie'>17 002 750</td>
+                                    </tr>
+                                </table>
+                            ))
+                        }
                     </div>
                 </div>
             </div>
