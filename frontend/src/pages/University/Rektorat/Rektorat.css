@@ -1,3 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
 .Rektorat {
-    margin-top: 100vw;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1.56vw;
+    margin-top: 6.5vw;
+    margin-bottom: 2vw;
+    font-family: "Montserrat", sans-serif;
 }
+
+.RektoratContainer {
+    width: 70vw;
+    display: flex; 
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.RektoratContant {
+    display: flex;
+    justify-content: space-between;
+}
+
+.RektoratContContainer {
+    display: flex;  
+}
+
+ .RektoratContantObsh {
+    display: flex;
+ }
+
+ .RektoratBox {
+    
+ }
+
+ 
