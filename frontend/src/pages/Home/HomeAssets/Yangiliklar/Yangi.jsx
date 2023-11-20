@@ -1,60 +1,51 @@
- 
+
 import { Link } from "react-router-dom";
 import './Yangi.css';
 import risone from './../image/pic1 1.png';
 import risotwo from './../image/pic1 1.png';
 import risthree from './../image/pic1 1.png';
 import risfour from './../image/pic1 1.png';
+import { useState, useEffect } from "react";
 import { LuMoveRight } from 'react-icons/lu';
-
+import axios from "axios";
 
 export default function Yangiliklar() {
+
+
+    const [data, setData] = useState([])
+    const getNews = async () => {
+        const response = await axios.get(`https://utu-ranch.uz/api/yangilik/43`)
+        setData(response.data.slice(0,4));
+        console.log(response.data.slice(0,4));
+    }
+
+    useEffect(() => {
+        getNews()
+    }, [])
+
+
     return (
         <div className="Yangilik">
             <div className="YangiliklarContainer">
                 <div className="YangilikTitleBox">
                     <div className="YangilikTitle"><p>Yangiliklar</p></div>
-                    <div className="YangilikTitleButton"><h5>To‘liq</h5> <Link> <LuMoveRight/> </Link></div>
+                    <div className="YangilikTitleButton"><h5>To‘liq</h5> <Link> <LuMoveRight /> </Link></div>
                 </div>
                 <div className="YangilikCards">
-                    <div className="YangilikCard">
-                        <div className="CardImgbox"><img src={risone} alt="" /></div>
-                        <div className="Cardtext"><h4>Qabul 2023-2024</h4><p>Urganch RANCH Texnologiya
-                            Universitetida 2023-2024 o'quv
-                            yillari uchun qabul davom etmoqda.
-                            Qabul davomida Siz 14 ta ta'lim
-                            yo'nalishi bo'yicha talaba bo'lish
-                            imkoniyatiga ega bolasiz. </p></div>
-                        <div className="Cardbutton"><Link><button>Batafsil...</button></Link></div>
-                    </div>
-                    <div className="YangilikCard">
-                        <div className="CardImgbox"><img src={risotwo} alt="" /></div>
-                        <div className="Cardtext"><h4>Talabalar ligas</h4><p>2023 yil 12 sentyabr kuni “Urganch
-                            Ranch texnologiya universiteti”da
-                            Respublika “Talabalar ligasi” shaxmat
-                            musobaqasining Universitet bosqichi
-                            o‘tkazildi. </p></div>
-                        <div className="Cardbutton"><Link><button>Batafsil...</button></Link></div>
-                    </div>
-                    <div className="YangilikCard">
-                        <div className="CardImgbox"><img src={risthree} alt="" /></div>
-                        <div className="Cardtext"><h4>Qabul 2023-2024</h4><p>Urganch RANCH Texnologiya
-                            Universitetida 2023-2024 o'quv
-                            yillari uchun qabul davom etmoqda.
-                            Qabul davomida Siz 14 ta ta'lim
-                            yo'nalishi bo'yicha talaba bo'lish
-                            imkoniyatiga ega bolasiz.  </p></div>
-                        <div className="Cardbutton"><Link><button>Batafsil...</button></Link></div>
-                    </div>
-                    <div className="YangilikCard">
-                        <div className="CardImgbox"><img src={risfour} alt="" /></div>
-                        <div className="Cardtext"><h4>Talabalar ligas</h4><p>2023 yil 12 sentyabr kuni “Urganch
-                            Ranch texnologiya universiteti”da
-                            Respublika “Talabalar ligasi” shaxmat
-                            musobaqasining Universitet bosqichi
-                            o‘tkazildi.</p></div>
-                        <div className="Cardbutton"><Link><button>Batafsil...</button></Link></div>
-                    </div>
+                    {
+                        data.map(item => (
+                            <Link to={`yanglik-toliq/${item.id}`} key={item.id}>
+                                <div className="YangilikCard">
+                                    <div className="CardImgbox"><img src={item.image} alt="" /></div>
+                                    <div className="Cardtext">
+                                        <h4>{item.title}</h4>
+                                        <p>{item.mini_desc}</p>
+                                    </div>
+                                    <div className="Cardbutton"><Link><button>Batafsil...</button></Link></div>
+                                </div>
+                            </Link>
+                        ))
+                    }
                 </div>
             </div>
         </div>

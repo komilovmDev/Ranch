@@ -5,6 +5,7 @@ import { AiOutlineRight } from 'react-icons/ai';
 import Pic1 from './../News/NewsAssets/img/pic1 1.png';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import DOMPurify from 'dompurify';
 
 export default function NewsPage() {
     const { id } = useParams();
@@ -40,12 +41,12 @@ export default function NewsPage() {
                     <AiOutlineRight className='Iconright' />
                     <Link className='NewsTitleLineText' to={'/News'}>Yangiliklar</Link>
                     <AiOutlineRight className='Iconright' />
-                    <p>{data.title}</p> {/* Assuming there is a 'title' property in your data */}
+                    <p>{data.title}</p>
                 </div>
 
                 <div className="NewsPageContant">
                     <div className="NewsPageContantTitle">
-                        <p>{data.title}</p> {/* Assuming there is a 'title' property in your data */}
+                        <p>{data.title}</p>
                     </div>
 
                     <div className="NewsPageContantBox">
@@ -53,8 +54,7 @@ export default function NewsPage() {
                             <img src={data.image} alt="" />
                         </div>
                         <div className="NewsPageContantBoxText">
-                            <p>{data.desc}</p> {/* Assuming there is a 'description' property in your data */}
-                            {/* Additional data rendering goes here */}
+                            <p dangerouslySetInnerHTML={{ __html: data.desc}}></p>
                         </div>
                     </div>
                 </div>

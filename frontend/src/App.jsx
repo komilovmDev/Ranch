@@ -19,7 +19,6 @@ import Galereya from './pages/Galereya/Galereya';
 import OchMalumot from './pages/Talabalar/OchMalumot/OchMalumot';
 import Talabalarga from './pages/Talabalar/Talabalar/Talabalar.jsx';
 import Burger from './context/Navbar/Burger.jsx';
-
 import Rektorat from './pages/University/Rektorat/Rektorat.jsx';
 
 function App() {
@@ -60,7 +59,6 @@ function App() {
             <Route path='/ochiq-malumot/:id' element={<OchMalumot/>} />
             <Route path='/talaba/:id' element={<Talabalarga/>} />
             <Route path='/rektorat/:id' element={<Rektorat/>} />
-
           </Routes>
           <Footer />
         </Router>
