@@ -89,3 +89,32 @@
 .Tretie {
   text-align: center;
 }
+
+
+@media screen and (max-width: 768px) {
+  .KunduzgiContainer {
+    width: 90vw;
+  }
+  .KunduzgiTable {
+    width: 100%;
+  }
+  .OneTableBoardTable {
+    width: 100%;
+  }
+  .KunduzgiTable table tr {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+  }
+  .KunduzgiTable table td {
+    font-size: 3vw;
+  }
+  .OneTableBoardTable .Vtoroe {
+    height: auto;
+  }
+  .KundizgiTitle p {
+    font-size: 4vw;
+  }
+}
