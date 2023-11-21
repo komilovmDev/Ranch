@@ -1,7 +1,7 @@
 import './Burger.scss';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Link , NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { MdKeyboardArrowRight } from "react-icons/md"
 import logo from './../../pages/University/Img/Ranch 1 copy 5.png'
 import { useContext } from 'react';
@@ -14,7 +14,7 @@ const Burger = () => {
 
     const getCategory = async () => {
         try {
-            const response = await axios.get('https://api.u-ukm.uz/categories/');
+            const response = await axios.get('https://utu-ranch.uz/api/categories/');
             setData(response.data);
         } catch (error) {
             console.error('Error fetching data:', error);
@@ -28,7 +28,7 @@ const Burger = () => {
     const refreshPageHome = () => {
         window.location.assign('/');
     }
-    
+
     return (
         <section id='menu'>
             <article >
@@ -49,18 +49,20 @@ const Burger = () => {
                                                 {
                                                     item.children.map(chilItem => (
                                                         <div className="popup">
-                                                            <a className="close" href="#*"><AiFillCaretLeft /></a>
+                                                            <a className="close"><AiFillCaretLeft /></a>
                                                             <div className="content">
-                                                                <h1>{lang == 'uz' ? chilItem.name_uz : lang == 'ru' ? chilItem.name_ru : chilItem.name_en}</h1>
+                                                                <Link onClick={() => window.location.assign(`/${chilItem.slug}/${chilItem.id}`)}>
+                                                                    <h1>{lang == 'uz' ? chilItem.name_uz : lang == 'ru' ? chilItem.name_ru : chilItem.name_en}</h1>
+                                                                </Link>
                                                             </div>
-                                                            {
+                                                            {/* {
                                                                 chilItem.children.map(linkChil => (
                                                                     <div className='MapBox'>
-                                                                        <Link onClick={() => window.location.assign(`/${chilItem.yordamchi}/${linkChil.id}`)}><h4>{lang == 'uz' ? linkChil.name_uz : lang == 'ru' ? linkChil.name_ru : linkChil.name_en}</h4></Link>
+                                                                        <Link onClick={() => window.location.assign(`/${linkChil.slug}/${linkChil.id}`)}><h4>{lang == 'uz' ? linkChil.name_uz : lang == 'ru' ? linkChil.name_ru : linkChil.name_en}</h4></Link>
                                                                     </div>
                                                                 ))
 
-                                                            }
+                                                            } */}
                                                         </div>
                                                     ))
                                                 }
@@ -81,10 +83,7 @@ const Burger = () => {
                     </div>
                 </div>
             </article>
-
-
         </section>
-
     )
 }
 
