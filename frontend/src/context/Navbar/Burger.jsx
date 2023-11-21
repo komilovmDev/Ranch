@@ -49,7 +49,7 @@ const Burger = () => {
                                                 {
                                                     item.children.map(chilItem => (
                                                         <div className="popup">
-                                                            <a className="close"><AiFillCaretLeft /></a>
+                                                            <a className="close" href="#*"><AiFillCaretLeft /></a>
                                                             <div className="content">
                                                                 <Link onClick={() => window.location.assign(`/${chilItem.slug}/${chilItem.id}`)}>
                                                                     <h1>{lang == 'uz' ? chilItem.name_uz : lang == 'ru' ? chilItem.name_ru : chilItem.name_en}</h1>
