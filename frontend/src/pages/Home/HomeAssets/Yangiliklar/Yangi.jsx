@@ -36,7 +36,7 @@ export default function Yangiliklar() {
                     <div className="YangilikTitle"><p>Yangiliklar</p></div>
                     <div className="YangilikTitleButton"><h5>To‘liq</h5> <Link> <LuMoveRight /> </Link></div>
                 </div>
-                <div className="YangilikCards">
+                <div className="YangilikSwiper">
 
                             <Swiper
                                 className='YangiliklarCards'
