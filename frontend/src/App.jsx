@@ -49,9 +49,9 @@ function App() {
               <Route path='/Faoliyat/Hamkor' element={<Fhamkor />} />
               <Route path='/Faoliyat/Yoshlar' element={<Yoshlar />} />
               <Route path='/Kunduzgi-talim-yonalishlari/:id' element={<Kunduzgi />} />
-              <Route path='/Abiturient/Sirtiq' element={<Kunduzgi />} />
-              <Route path='/Abiturient/Magistr' element={<Kunduzgi />} />
-              <Route path='/Abiturient/Ikkinchi' element={<Kunduzgi />} />
+              <Route path='/ikkinchi-mutaxassislik/:id' element={<Kunduzgi />} />
+              <Route path='/sirtqi-talim-yonalishlari/:id' element={<Kunduzgi />} />
+              <Route path='/magistratura-yonalishlari-va-qabul-kvotasi/:id' element={<Kunduzgi />} />
               <Route path='/Abiturient/Qochirish' element={<Kunduzgi />} />
               <Route path='/online-hujjat-topshirish/:id' element={<Zayavka />} />
               <Route path='/galireryalar/:id' element={<Galereya />} />

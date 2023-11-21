@@ -73,7 +73,6 @@ const Burger = () => {
                                     ))
                                 }
                                 <div className="LinespanBut">
-
                                     <div className="dropdownlang">
                                         <Leng />
                                     </div>
