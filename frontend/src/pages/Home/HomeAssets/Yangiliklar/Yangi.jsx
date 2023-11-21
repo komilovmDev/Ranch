@@ -9,6 +9,10 @@ import { useState, useEffect } from "react";
 import { LuMoveRight } from 'react-icons/lu';
 import axios from "axios";
 import DOMPurify from 'dompurify';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import { Pagination } from 'swiper/modules';
 
 export default function Yangiliklar() {
 
@@ -33,20 +37,48 @@ export default function Yangiliklar() {
                     <div className="YangilikTitleButton"><h5>To‘liq</h5> <Link> <LuMoveRight /> </Link></div>
                 </div>
                 <div className="YangilikCards">
-                    {
-                        data.map(item => (
-                            <div className="YangilikCard" key={item.id}>
-                                <Link to={`yanglik-toliq/${item.id}`}>
-                                    <div className="CardImgbox"><img src={item.image} alt="" /></div>
-                                </Link>
-                                <div className="Cardtext">
-                                    <h4>{item.mini_title}...</h4>
-                                    <p dangerouslySetInnerHTML={{ __html: item.mini_desc}}></p>
-                                </div>
-                                <div className="Cardbutton"><Link to={`yanglik-toliq/${item.id}`}><button>Batafsil...</button></Link></div>
-                            </div>
-                        ))
-                    }
+
+                            <Swiper
+                                className='YangiliklarCards'
+                                slidesPerView={1}
+                                spaceBetween={10}
+                                pagination={{
+                                    clickable: true,
+                                }}
+                                breakpoints={{
+                                    640: {
+                                        slidesPerView: 2,
+                                        spaceBetween: 20,
+                                    },
+                                    768: {
+                                        slidesPerView: 4,
+                                        spaceBetween: 40,
+                                    },
+                                    1024: {
+                                        slidesPerView: 5,
+                                        spaceBetween: 50,
+                                    },
+                                }}
+                                modules={[Pagination]}
+                            >
+                                {
+                                    data.map(item => (
+
+                                        <SwiperSlide key={item.id} className="YangilikCard">
+                                            <div className="CardImgbox">
+                                                <img src={item.image} alt="" />
+                                            </div>
+                                            <div className="Cardtext">
+                                                <h4>{item.mini_title}...</h4>
+                                                <p dangerouslySetInnerHTML={{ __html: item.mini_desc }}></p>
+                                            </div>
+                                            <div className="Cardbutton">
+                                                <Link to={`yanglik-toliq/${item.id}`}><button>Batafsil...</button></Link>
+                                            </div>
+                                        </SwiperSlide>
+                                    ))
+                                }
+                            </Swiper>
                 </div>
             </div>
         </div>

@@ -5,6 +5,7 @@ import { AiOutlineRight } from 'react-icons/ai';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import zvezda from '../../pages/Home/HomeAssets/IMG/zvezda.png';
+import './Modal.scss'
 
 export default function Galereya() {
     const [catData, setCatData] = useState([]);
@@ -49,7 +50,7 @@ export default function Galereya() {
         setSelectedCategory(categoryId);
     }
 
-    const {id} = useParams()
+    const { id } = useParams()
     const [gallaryData, setGallaryData] = useState([])
     const getGallary = async () => {
         const response = await axios.get(`https://utu-ranch.uz/api/content/${id}/`)

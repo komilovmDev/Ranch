@@ -2,7 +2,7 @@
 
 .Sviper {
     margin-top: 1.19vw;
-    width: 100%; 
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -12,7 +12,7 @@
 .SviperSwiper {
     width: 70vw;
     height: 26vw;
-    display: flex; 
+    display: flex;
     border-radius: 1vw;
     overflow: hidden;
 }
@@ -41,7 +41,7 @@
 
 .BlankBegBox {
     margin-top: -1.5vw;
-    position: relative; 
+    position: relative;
     z-index: 1;
     display: flex;
     align-items: center;
@@ -54,4 +54,14 @@
     font-weight: 600;
     background-color: #FF6400;
     letter-spacing: .1vw;
+}
+
+@media (max-width:768px) {
+    .SviperSwiper {
+        width: 17.3vw;
+        height: 13.72vw;
+        display: flex;
+        border-radius: 1vw;
+        overflow: hidden;
+    }
 }
