@@ -20,8 +20,8 @@ export default function Yangiliklar() {
     const [data, setData] = useState([])
     const getNews = async () => {
         const response = await axios.get(`https://utu-ranch.uz/api/yangilik/43`)
-        setData(response.data.slice(0, 4));
-        console.log(response.data.slice(0, 4));
+        setData(response.data.slice(0, 8));
+        console.log(response.data.slice(0, 8));
     }
 
     useEffect(() => {
