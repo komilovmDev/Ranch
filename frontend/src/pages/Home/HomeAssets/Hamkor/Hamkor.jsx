@@ -5,8 +5,21 @@ import 'swiper/css/pagination';
 import { Autoplay, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import ris from './../HamkorImg/ris1 (1).png'
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 
 export default function Hamkor() {
+
+    const [data, setData] = useState([])
+    const getHamkor = async () => {
+        const response = await axios.get(`https://utu-ranch.uz/api/hamkorlar/`);
+        setData(response.data);
+    }
+
+    useEffect(() => {
+        getHamkor()
+    }, [])
+
     return (
         <div className="Hamkor">
             <div className="HamkorTitleBox">
@@ -27,15 +40,11 @@ export default function Hamkor() {
                         loop={true}
                         modules={[Autoplay, Navigation]}
                     >
-                        <SwiperSlide><div className="HamkorSliderImgBox"><Link><img src={ris} alt="" /></Link></div></SwiperSlide>
-                        <SwiperSlide><div className="HamkorSliderImgBox"><Link><img src={ris} alt="" /></Link></div></SwiperSlide>
-                        <SwiperSlide><div className="HamkorSliderImgBox"><Link><img src={ris} alt="" /></Link></div></SwiperSlide>
-                        <SwiperSlide><div className="HamkorSliderImgBox"><Link><img src={ris} alt="" /></Link></div></SwiperSlide>
-                        <SwiperSlide><div className="HamkorSliderImgBox"><Link><img src={ris} alt="" /></Link></div></SwiperSlide>
-                        <SwiperSlide><div className="HamkorSliderImgBox"><Link><img src={ris} alt="" /></Link></div></SwiperSlide>
-                        <SwiperSlide><div className="HamkorSliderImgBox"><Link><img src={ris} alt="" /></Link></div></SwiperSlide>
-                        <SwiperSlide><div className="HamkorSliderImgBox"><Link><img src={ris} alt="" /></Link></div></SwiperSlide>
-                        <SwiperSlide><div className="HamkorSliderImgBox"><Link><img src={ris} alt="" /></Link></div></SwiperSlide>
+                        {
+                            data.map(item => (
+                                <SwiperSlide><div className="HamkorSliderImgBox"><Link to={item.url_link}><img src={item.image} alt="" /></Link></div></SwiperSlide>
+                            ))
+                        }
                     </Swiper>
                 </div>
             </div>
