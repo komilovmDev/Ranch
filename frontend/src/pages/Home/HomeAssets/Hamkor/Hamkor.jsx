@@ -33,6 +33,16 @@ export default function Hamkor() {
                         slidesPerView={8}
                         spaceBetween={0}
                         centeredSlides={true}
+                        breakpoints={{
+                            640: {
+                                slidesPerView: 2, 
+                                spaceBetween:20,
+                            },
+                            768: {
+                                slidesPerView: 2, 
+                                spaceBetween:40,
+                            },                                                                                              
+                        }}
                         autoplay={{
                             delay: 10000,
                             disableOnInteraction: false,

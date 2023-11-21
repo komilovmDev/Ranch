@@ -42,6 +42,9 @@
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+    text-decoration: none;
+    font-size: 1vw;
+    color: #3E3E3E;
 }
 
 .DiscoveryHref a img {
@@ -82,4 +85,68 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+ 
+
+@media (max-width:768px) {
+    .DiscoveryContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 2vw;
+        width: 20vw;
+    }
+
+    .DiscoveryTitle p {
+        font-size: 1vw;
+        color: #FF6400;
+        font-weight: 600;
+        margin: 0;
+        padding: 0;
+    }
+
+    .DiscoveryHref a img {
+        width: .6vw;
+        height: .6vw;
+    }
+
+    .DiscoveryHref a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        font-size: .85vw;
+    }
+
+    .DiscoverySliderImgBox {
+        width: 20vw;
+        height: 20vw;
+        text-align: center;
+        font-size: 1vw;
+        background: #fff;
+        border-radius: 1vw;
+        overflow: hidden;
+        /* Center slide text vertically */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .DiscoverySliderImgBox img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .DiscoverySwiper {
+        width: 20vw;
+        height: 100%;
+        display: flex;
+    }
+    
+
+
 }

@@ -42,16 +42,13 @@ export default function Yangiliklar() {
                                 className='YangiliklarCards'
                                 slidesPerView={1}
                                 spaceBetween={10}
-                                pagination={{
-                                    clickable: true,
-                                }}
                                 breakpoints={{
                                     640: {
-                                        slidesPerView: 2,
+                                        slidesPerView: 1,
                                         spaceBetween: 20,
                                     },
                                     768: {
-                                        slidesPerView: 4,
+                                        slidesPerView: 1,
                                         spaceBetween: 40,
                                     },
                                     1024: {

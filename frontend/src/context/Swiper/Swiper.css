@@ -58,10 +58,15 @@
 
 @media (max-width:768px) {
     .SviperSwiper {
-        width: 17.3vw;
-        height: 13.72vw;
+        width: 20vw;
+        height: 17vw;
         display: flex;
         border-radius: 1vw;
         overflow: hidden;
+    }
+
+    .SliderImgBox {
+        width: 20vw;
+        height: 17vw;
     }
 }

@@ -37,3 +37,18 @@
     color: #FF6400;
     font-weight: 600;
 }
+
+@media (max-width:768px){
+    .HamkorTitleBox {
+        width: 20vw;
+    }
+
+    .HamkorSwiperBox {
+        width: 20vw;
+    }
+
+    .HamkorSwiper {
+        width: 20vw;
+    }
+
+}

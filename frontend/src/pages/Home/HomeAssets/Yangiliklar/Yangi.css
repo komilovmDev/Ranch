@@ -47,6 +47,7 @@
 
 .YangiliklarCards {
     height: auto;
+    height: 24vw;
     display: flex;
     justify-content: center;
 }
@@ -137,16 +138,22 @@
 
 @media (max-width:768px){
     
+    .YangiliklarCards {
+        width: 20vw;
+        height: 30vw;
+    }
+
     .YangiliklarContainer {
-        width: 100%;
+        width: 20vw;
+        height: 30vw;
         display: flex;
         flex-direction: column;
-        gap: .78vw;
+        align-items: center;
     }
 
     .YangilikCard {
-        width: 14vw;
-        height: 19.27vw;
+        width: 20vw;
+        height: 25vw;
         display: flex;
         flex-direction: column;
         border-radius: .5vw;
@@ -154,6 +161,76 @@
         justify-content: space-between;
         text-decoration: none;
         list-style-type: none;
+        background-color: #d9d9d92c;
+        padding-bottom: 1vw;
     }
 
+    .CardImgbox {
+        width: 100%;
+        height: 15vw;
+    }
+
+    .CardImgbox img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .swiper-android .swiper-slide, .swiper-ios .swiper-slide, .swiper-wrapper {
+        width: 20vw;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .Yangilik {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 20vw;
+        position: relative;
+        z-index: 1;
+        margin-bottom: 4vw;
+        font-family: "Montserrat", sans-serif;
+    }
+    
+
+    .Cardtext h4 {
+        padding: 0;
+        margin: 0;
+        color: #575757;
+        font-size:1.1vw;
+        font-weight: 700;
+        border-bottom: .1vw solid #FF6400;
+        padding-bottom: 1vw;
+    }
+
+    .Cardtext p {
+        padding: 0;
+        margin: 0;
+        color: rgba(62, 62, 62, 0.70);
+        font-weight: 500;
+        font-size: .8vw;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    .Cardtext {
+        padding: 0 2vw;
+    }
+    .Cardbutton {
+        padding: 0 1.3vw;
+    }
+
+    .Cardbutton button {
+        outline: none;
+        border: none;
+        background: none;
+        color: #FF6400;
+        font-size: 1.2vw;
+        font-weight: 700;
+        cursor: pointer;
+    }
 }

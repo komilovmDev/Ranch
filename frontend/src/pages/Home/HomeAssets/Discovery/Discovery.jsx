@@ -76,6 +76,16 @@ export default function Discovery() {
                             slidesPerView={3}
                             spaceBetween={0}
                             centeredSlides={true}
+                            breakpoints={{
+                                640: {
+                                    slidesPerView: 1, 
+                                    spaceBetween:20,
+                                },
+                                768: {
+                                    slidesPerView: 1, 
+                                    spaceBetween:40,
+                                },                                                                                              
+                            }}
                             autoplay={{
                                 delay: 1000000,
                             }}
