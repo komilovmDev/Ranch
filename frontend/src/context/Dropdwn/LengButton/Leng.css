@@ -51,10 +51,12 @@
 }
 
 #LangContainer {
+  width: 90%;
   position: relative;
   z-index: 1;
   font-size: 0.833vw;
   background-color: #fff;
+  border-top: 3px solid black;
 }
 
 #UlDivLang {
