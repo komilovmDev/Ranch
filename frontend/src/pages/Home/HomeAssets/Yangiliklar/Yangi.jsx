@@ -37,10 +37,9 @@ export default function Yangiliklar() {
                     <div className="YangilikTitleButton"><h5>To‘liq</h5> <Link> <LuMoveRight /> </Link></div>
                 </div>
                 <div className="YangilikSwiper">
-
                             <Swiper
                                 className='YangiliklarCards'
-                                slidesPerView={4}
+                                slidesPerView={1}
                                 spaceBetween={10}
                                 breakpoints={{
                                     640: {

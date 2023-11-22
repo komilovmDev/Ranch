@@ -88,7 +88,7 @@ export default function Discovery() {
                                 1024: {
                                     slidesPerView: 1, 
                                     spaceBetween:40,
-                                }                                                                                              
+                                }                                                                               
                             }}
                             autoplay={{
                                 delay: 1000000,

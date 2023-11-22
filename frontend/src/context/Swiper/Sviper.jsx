@@ -36,7 +36,11 @@ export default function Sviper() {
                     >
                         {
                             data.map(item => (
-                                <SwiperSlide><div className="SliderImgBox"><img src={item.image} alt="" /></div></SwiperSlide>
+                                <SwiperSlide className='bannerBox'>
+                                    <div className="SliderImgBox">
+                                        <img src={item.image} alt="" style={{ width: '100%' }} />
+                                    </div>
+                                </SwiperSlide>
                             ))
                         }
                     </Swiper>
