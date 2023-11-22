@@ -40,7 +40,7 @@ export default function Yangiliklar() {
 
                             <Swiper
                                 className='YangiliklarCards'
-                                slidesPerView={1}
+                                slidesPerView={4}
                                 spaceBetween={10}
                                 breakpoints={{
                                     640: {

@@ -56,17 +56,4 @@
     letter-spacing: .1vw;
 }
 
-@media (max-width:768px) {
-    .SviperSwiper {
-        width: 20vw;
-        height: 17vw;
-        display: flex;
-        border-radius: 1vw;
-        overflow: hidden;
-    }
-
-    .SliderImgBox {
-        width: 20vw;
-        height: 17vw;
-    }
-}
+ 

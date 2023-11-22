@@ -8,15 +8,4 @@ body,html {
     display: none;
 }
 
-@media (max-width:768px) {
-    .Navbar {
-        display: none;
-    }
-
-    .Burger {
-        display: none;
-        position: fixed;
-        top: 0;
-        z-index: 2;
-    }
-}
+ 
