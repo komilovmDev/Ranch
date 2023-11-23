@@ -174,8 +174,16 @@
         font-size:5vw ;
     }
 
-    .YangiliklarContainer {
-        width: 70%;
+    .YangilikCard {
+        width: 13.80vw;
+        height: 19.27vw;
+        display: flex;
+        flex-direction: column;
+        border-radius: .5vw;
+        overflow: hidden;
+        justify-content: center;
+        text-decoration: none;
+        list-style-type: none;
     }
 
     .YangilikSwiper {
