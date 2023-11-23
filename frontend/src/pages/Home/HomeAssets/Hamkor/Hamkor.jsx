@@ -41,7 +41,11 @@ export default function Hamkor() {
                             768: {
                                 slidesPerView: 2, 
                                 spaceBetween:40,
-                            },                                                                                              
+                            },
+                            1024: {
+                                slidesPerView: 8, 
+                                spaceBetween:40,
+                            }                                                                                                  
                         }}
                         autoplay={{
                             delay: 10000,

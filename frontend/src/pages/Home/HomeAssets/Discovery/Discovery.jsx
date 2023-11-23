@@ -73,7 +73,7 @@ export default function Discovery() {
                 <div className="DiscoveryRight">
                     <div className="DiscoverySwiper">
                         <Swiper className="DiscoverySwiper"
-                            slidesPerView={3}
+                            slidesPerView={1}
                             spaceBetween={0}
                             centeredSlides={true}
                             breakpoints={{
@@ -86,7 +86,7 @@ export default function Discovery() {
                                     spaceBetween:40,
                                 },
                                 1024: {
-                                    slidesPerView: 1, 
+                                    slidesPerView: 3, 
                                     spaceBetween:40,
                                 }                                                                               
                             }}
