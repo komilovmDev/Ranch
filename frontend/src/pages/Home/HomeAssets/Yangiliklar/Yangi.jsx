@@ -37,44 +37,46 @@ export default function Yangiliklar() {
                     <div className="YangilikTitleButton"><h5>To‘liq</h5> <Link> <LuMoveRight /> </Link></div>
                 </div>
                 <div className="YangilikSwiper">
-                            <Swiper
-                                className='YangiliklarCards'
-                                slidesPerView={1}
-                                spaceBetween={10}
-                                breakpoints={{
-                                    640: {
-                                        slidesPerView: 1,
-                                        spaceBetween: 20,
-                                    },
-                                    768: {
-                                        slidesPerView: 1,
-                                        spaceBetween: 40,
-                                    },
-                                    1024: {
-                                        slidesPerView: 5,
-                                        spaceBetween: 50,
-                                    },
-                                }}
-                                modules={[Pagination]}
-                            >
-                                {
-                                    data.map(item => (
+                    <Swiper
+                        className='YangiliklarCards'
+                        slidesPerView={1}
+                        spaceBetween={10}
+                        breakpoints={{
+                            640: {
+                                slidesPerView: 1,
+                                spaceBetween: 20,
+                            },
+                            768: {
+                                slidesPerView: 1,
+                                spaceBetween: 40,
+                            },
+                            1024: {
+                                slidesPerView: 5,
+                                spaceBetween: 50,
+                            },
+                        }}
+                        modules={[Pagination]}
+                    >
+                        {
+                            data.map(item => (
 
-                                        <SwiperSlide key={item.id} className="YangilikCard">
-                                            <div className="CardImgbox">
-                                                <img src={item.image} alt="" />
-                                            </div>
-                                            <div className="Cardtext">
-                                                <h4>{item.mini_title}...</h4>
-                                                <p dangerouslySetInnerHTML={{ __html: item.mini_desc }}></p>
-                                            </div>
-                                            <div className="Cardbutton">
-                                                <Link to={`yanglik-toliq/${item.id}`}><button>Batafsil...</button></Link>
-                                            </div>
-                                        </SwiperSlide>
-                                    ))
-                                }
-                            </Swiper>
+                                <SwiperSlide key={item.id} className="YangilikCard">
+                                    <div className="CardImgbox">
+                                        <img src={item.image} alt="" />
+                                    </div>
+                                    <div className="Ebeyshiy">
+                                        <div className="Cardtext">
+                                            <h4>{item.mini_title}...</h4>
+                                            <p dangerouslySetInnerHTML={{ __html: item.mini_desc }}></p>
+                                        </div>
+                                        <div className="Cardbutton">
+                                            <Link to={`yanglik-toliq/${item.id}`}><button>Batafsil...</button></Link>
+                                        </div>
+                                    </div>
+                                </SwiperSlide>
+                            ))
+                        }
+                    </Swiper>
                 </div>
             </div>
         </div>
