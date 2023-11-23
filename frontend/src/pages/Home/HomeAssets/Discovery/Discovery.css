@@ -89,4 +89,20 @@
 
  
 
- 
+@media screen and (max-width: 768px) {
+    .Discovery {
+        height: 50vw;
+    }
+    .DiscoveryContainer {
+        width: 90%;
+        height: 50vw;
+        flex-direction: column;
+    }
+    .DiscoverySwiper {
+        width: 100%;
+    }
+    .DiscoverySliderImgBox {
+        width: 100%;
+        height: 40vw;
+    }
+}
