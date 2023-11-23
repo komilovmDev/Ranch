@@ -91,11 +91,12 @@
 
 @media screen and (max-width: 768px) {
     .Discovery {
-        height: 50vw;
+        height: 70vw;
     }
     .DiscoveryContainer {
         width: 90%;
         height: 50vw;
+        gap: 20px;
         flex-direction: column;
     }
     .DiscoverySwiper {
@@ -103,6 +104,12 @@
     }
     .DiscoverySliderImgBox {
         width: 100%;
-        height: 40vw;
+        height: 60vw;
+    }
+    .DiscoveryTitle p {
+        font-size: 4.5vw;
+    }
+    .DiscoveryHref a {
+        font-size: 3vw;
     }
 }
