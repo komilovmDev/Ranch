@@ -50,16 +50,16 @@
     }
 
     .HamkorTitleBox {
-        width: 70%;
+        width: 90%;
     }
 
 
     .HamkorTitle p {
-        font-size: 5vw;
+        font-size: 8vw;
     }
 
     .HamkorSwiperBox a img {
-        width: 20vw;
+        width: 25vw;
         height: auto;
     }
     .HamkorSwiper {

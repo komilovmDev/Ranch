@@ -68,7 +68,7 @@
 @media (max-width:768px) {
 
   .CountContainer {
-    width: 70%;
+    width: 90%;
     display: flex;
     justify-content: center;
   }
@@ -81,9 +81,9 @@
   }
 
   .CountBox {
-    width: 25vw;
-    max-width: 25vw;
-    height: 30.02vw;
+    width: 40vw;
+    max-width: 50vw;
+    height: 50.02vw;
     padding: 1vw 0.5vw;
     display: flex;
     flex-direction: column;
@@ -91,11 +91,11 @@
     align-items: center;
     gap: 1.23vw;
     border: 0.1vw solid #ff3200;
-    border-radius: 0.78vw;
+    border-radius: 4vw;
   }
 
   .ImgContbox {
-    width: 6vw;
+    width: 13vw;
     height: auto;
   }
 
@@ -109,7 +109,7 @@
   .CounterBox {
     display: flex;
     justify-content: center;
-    font-size: 6vw;
+    font-size: 8vw;
     font-weight: 800;
     color: #ff6400;
   }
@@ -118,7 +118,7 @@
     margin: 0;
     padding: 0;
     color: #575757;
-    font-size: 3vw;
+    font-size: 5vw;
     font-weight: 600;
   }
 }
