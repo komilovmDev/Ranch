@@ -124,6 +124,10 @@ iframe {
     height: 100%;
 }
 
+.FooterContainerRightUp img{
+    display: none;
+}
+
  @media (max-width:768px) {
     .FooterContainer {
         width: 70vw;
