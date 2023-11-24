@@ -101,7 +101,9 @@ iframe {
     padding: 0;
     margin: 0;
 }
-
+.FooterContainerRightDuwn2 {
+    display: none;
+}
 .FooterContainerRightDuwn {
     display: flex;
     align-items: center;
@@ -122,6 +124,55 @@ iframe {
     height: 100%;
 }
 
-@media (max-width:768px) {
+ @media (max-width:768px) {
+    .FooterContainer {
+        width: 70vw;
+        padding-top:2.03125vw ;
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 2.65vw;
+    }
+    .Footer {
+        width: 100%;
+        height: auto;
+        background: #3E3E3E;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        margin: 0;
+        padding: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    .FooterContainerRightDuwn {
+        display: none;
+    }
+    .FooterContainerRightDuwn2 {
+        display: flex;
+        align-items: center;
+        width: 37vw;
+        margin-top: 3vw;
+        border-top: .1vw solid rgba(255, 100, 0, 0.50);
+        padding-top: 1vw;
+        gap: 1.5vw;
+        height: 4vw;
+    }
     
-}
+    .FooterContainerRightUp {
+        display: flex;
+        flex-direction: column;
+    }
+    .FooterMalumotTitle p, .FooterQabulTitle p, .FooterStudentTitle p {
+        border-bottom: 0.1vw solid rgba(255, 100, 0, 0.50);
+        padding-bottom: 0.57vw;
+        margin: 0 0 0.5vw 0;
+        font-size: 5vw;
+    }
+    .FooterContainerLeftTitle img {
+        display: none;
+    }
+    .FooterContainerRightUp img{
+        width: 10.41vw;
+    }
+ }
