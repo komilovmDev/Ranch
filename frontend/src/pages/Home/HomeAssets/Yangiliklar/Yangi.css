@@ -138,7 +138,7 @@
     align-items: center;
 }
 
-@media screen and (max-width:768px) {
+@media  (max-width:768px) {
     .Yangilik {
         width: 100%;
         display: flex;
@@ -174,17 +174,7 @@
         font-size:5vw ;
     }
 
-    .YangilikCard {
-        width: 13.80vw;
-        height: 19.27vw;
-        display: flex;
-        flex-direction: column;
-        border-radius: .5vw;
-        overflow: hidden;
-        justify-content: center;
-        text-decoration: none;
-        list-style-type: none;
-    }
+ 
 
     .YangilikSwiper {
         width: 100%;
@@ -192,15 +182,13 @@
 
     .YangilikCard {
         width: 100%;
-        height: 95vw;
-        display: flex;
-        flex-direction: column;
+        height: 95vw; 
         border-radius: 5vw;
-        overflow: hidden;
-        justify-content: space-between;
+        display: block;
+        overflow: hidden; 
         text-decoration: none;
         list-style-type: none;
-        background-color: #D9D9D9;
+        background-color: #d9d9d925;
     }
 
     .CardImgbox {
@@ -224,7 +212,7 @@
         display: flex;
         flex-direction: column;
         gap: 2vw;
-        padding: 0vw 1vw;
+        padding: 0vw 4vw;
     }
     
     .Cardtext h4 {
@@ -236,6 +224,8 @@
         color: #575757;
         font-size: 4vw;
         font-weight: 700;
+        border-bottom: .2vw solid #FF6400;
+        padding-bottom: 2vw;
     }
     
     .Cardtext p {
@@ -263,4 +253,12 @@
         cursor: pointer;
     }
     
+    .Ebeyshiy {
+        padding-top: 4vw;
+        display: flex;
+        flex-direction: column;
+        gap: 12vw;
+        width: 100%;
+        height: 100%;
+    }
 }

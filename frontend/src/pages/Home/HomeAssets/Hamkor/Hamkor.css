@@ -38,4 +38,35 @@
     font-weight: 600;
 }
 
- 
+ @media (max-width:768px) {
+    .Hamkor {
+        width: 100%;
+        display: flex;
+        gap: 2vw;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: "Montserrat", sans-serif;
+    }
+
+    .HamkorTitleBox {
+        width: 70%;
+    }
+
+
+    .HamkorTitle p {
+        font-size: 5vw;
+    }
+
+    .HamkorSwiperBox a img {
+        width: 20vw;
+        height: auto;
+    }
+    .HamkorSwiper {
+        width: 100vw;
+    }
+    
+    .HamkorSwiperBox {
+        width: 100%;
+    }
+ }
