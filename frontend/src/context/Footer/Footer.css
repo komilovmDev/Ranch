@@ -171,12 +171,41 @@ iframe {
         border-bottom: 0.1vw solid rgba(255, 100, 0, 0.50);
         padding-bottom: 0.57vw;
         margin: 0 0 0.5vw 0;
-        font-size: 5vw;
+        font-size: 8vw;
+        width: 80%;
     }
     .FooterContainerLeftTitle img {
         display: none;
     }
     .FooterContainerRightUp img{
-        width: 10.41vw;
+        display: block;
+        width: 40.41vw;
+    }
+
+    .FooterMalumotHref a p, .FooterQabulHref a p, .FooterStudentHref a p {
+        padding: 0;
+        margin: 0;
+        font-size: 5vw;
+    }
+
+    .FooterContainerLeftTitle a {
+        color: white;
+        text-decoration: none;
+        font-size: 8vw;
+        font-weight: 700;
+        font-family: "Montserrat", sans-serif;
+    }
+
+    .FooterContainerLeftTitle p {
+        color: rgba(255, 255, 255, 0.50);
+        font-size: 5vw;
+        width: 100%;
+        font-family: "Montserrat", sans-serif;
+    }
+
+    iframe {
+        width: 100%;
+        height: 40vw;
+        border-radius: 1vw;
     }
  }
