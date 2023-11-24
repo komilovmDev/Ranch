@@ -106,18 +106,36 @@
     font-size: 1vw;
 }
 
-@media screen and(max-width:768px) {
+@media screen and (max-width:768px) {
     .NewsContainer {
-        width: 100vw;
+        width: 90vw;
     }
     .NewsBloks {
-        width: 100vw;
+        width: 100%;
         display: block;
     }
     .NewsBloks a {
-        width: 100vw;
+        width: 100%;
+        height: auto;
     }
     .NewsBlok {
-        width: 100vw;
+        height: 70vw;
+        width: 100%;
+    }
+    .NewsBlokImg {
+        width: 100%;
+        height: 100%;
+    }
+    .NewsBlokText h4 {
+        font-size: 3vw;
+    }
+    .NewsBlokText p {
+        font-size: 2.5vw;
+    }
+    .NewsTitleLineIcon {
+        font-size: 3vw
+    }
+    .NewsTitleLineText {
+        font-size: 3vw;
     }
 }

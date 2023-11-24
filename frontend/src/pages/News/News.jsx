@@ -54,7 +54,7 @@ export default function News() {
                                             </div>
                                             <div className="NewsBlokText">
                                                 <h4>{item.title}</h4>
-                                                <p dangerouslySetInnerHTML={{ __html: item.mini_desc}}></p>
+                                                <p dangerouslySetInnerHTML={{ __html: item.mini_desc+"..."}}></p>
                                             </div>
                                         </div>
                                     </Link>
