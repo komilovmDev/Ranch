@@ -39,7 +39,7 @@ export default function Yangiliklar() {
                 <div className="YangilikSwiper">
                     <Swiper
                         className='YangiliklarCards'
-                        slidesPerView={1}
+                        slidesPerView={1    }
                         spaceBetween={10}
                         breakpoints={{
                             640: {

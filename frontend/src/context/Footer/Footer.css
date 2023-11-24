@@ -166,7 +166,7 @@ iframe {
     }
 
     .FooterContainerRightDuwnImg {
-        width: 10vw;
+        width: 8vw;
         height: auto;
     }
     
@@ -212,7 +212,7 @@ iframe {
 
     iframe {
         width: 100%;
-        height: 40vw;
-        border-radius: 1vw;
+        height: 60vw;
+        border-radius: 5vw;
     }
  }
