@@ -60,7 +60,7 @@
 @media (max-width:768px) {
     .SviperSwiper {
         width: 100%;
-        height: 60vw;
+        height: 80vw;
         display: flex;
         border-radius: 1vw;
         overflow: hidden;
