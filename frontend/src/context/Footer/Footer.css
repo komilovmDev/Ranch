@@ -155,12 +155,19 @@ iframe {
     .FooterContainerRightDuwn2 {
         display: flex;
         align-items: center;
-        width: 37vw;
+        justify-content: space-between;
+        width: 100%;
         margin-top: 3vw;
         border-top: .1vw solid rgba(255, 100, 0, 0.50);
-        padding-top: 1vw;
+        padding-top: 10vw;
+        padding-bottom: 7vw;
         gap: 1.5vw;
         height: 4vw;
+    }
+
+    .FooterContainerRightDuwnImg {
+        width: 10vw;
+        height: auto;
     }
     
     .FooterContainerRightUp {
