@@ -47,7 +47,7 @@ export default function News() {
                         <div className="NewsBloks">
                             {
                                 data.map(item => (
-                                    <Link to={`/yanglik-toliq/${item.id}`}>
+                                    <Link className='newB' to={`/yanglik-toliq/${item.id}`}>
                                         <div className="NewsBlok">
                                             <div className="NewsBlokImg">
                                                 <img src={item.image} alt="" />

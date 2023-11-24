@@ -105,3 +105,19 @@
 .Iconright {
     font-size: 1vw;
 }
+
+@media screen and(max-width:768px) {
+    .NewsContainer {
+        width: 100vw;
+    }
+    .NewsBloks {
+        width: 100vw;
+        display: block;
+    }
+    .NewsBloks a {
+        width: 100vw;
+    }
+    .NewsBlok {
+        width: 100vw;
+    }
+}
