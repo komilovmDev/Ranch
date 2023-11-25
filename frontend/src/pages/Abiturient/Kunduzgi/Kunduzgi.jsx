@@ -1,9 +1,25 @@
 import './Kunduzgi.css';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { RiBankLine } from 'react-icons/ri';
 import { AiOutlineRight } from 'react-icons/ai';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 
 export default function Kunduzgi() {
+
+
+    const { id } = useParams()
+    const [data , setData] = useState([])
+    const getData = async () => {
+        const response = await axios.get(`https://utu-ranch.uz/api/content/${id}/`)
+        setData(response.data)
+    }
+
+    useEffect(() => {
+        getData()
+    }, [id])
+
+
     return (
         <div className="Kunduzgi">
             <div className="KunduzgiContainer">
@@ -24,55 +40,6 @@ export default function Kunduzgi() {
                                 <td className='PervoeNach'>Yo’nalish <br /> &nbsp;&nbsp;&nbsp; ko‘di</td>
                                 <td className='Vtoroe'>Kunduzgi ta’lim yo’nalishlari nomi (o’quv muddati 4 yil)</td>
                                 <td className='Tretie'>Shartnoma <br /> miqdori</td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr className='TableName'>
-                                <td className='Pervoe'>60310100</td>
-                                <td className='Vtoroe'>Iqtisodiyot (tarmoqlar va sohalar bo’yicha)</td>
-                                <td className='Tretie'>17 002 750</td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr className='TableName'>
-                                <td className='Pervoe'>60310100</td>
-                                <td className='Vtoroe'>Iqtisodiyot (tarmoqlar va sohalar bo’yicha)</td>
-                                <td className='Tretie'>17 002 750</td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr className='TableName'>
-                                <td className='Pervoe'>60310100</td>
-                                <td className='Vtoroe'>Iqtisodiyot (tarmoqlar va sohalar bo’yicha)</td>
-                                <td className='Tretie'>17 002 750</td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr className='TableName'>
-                                <td className='Pervoe'>60310100</td>
-                                <td className='Vtoroe'>Iqtisodiyot (tarmoqlar va sohalar bo’yicha)</td>
-                                <td className='Tretie'>17 002 750</td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr className='TableName'>
-                                <td className='Pervoe'>60310100</td>
-                                <td className='Vtoroe'>Iqtisodiyot (tarmoqlar va sohalar bo’yicha)</td>
-                                <td className='Tretie'>17 002 750</td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr className='TableName'>
-                                <td className='Pervoe'>60310100</td>
-                                <td className='Vtoroe'>Iqtisodiyot (tarmoqlar va sohalar bo’yicha)</td>
-                                <td className='Tretie'>17 002 750</td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr className='TableName'>
-                                <td className='Pervoe'>60310100</td>
-                                <td className='Vtoroe'>Iqtisodiyot (tarmoqlar va sohalar bo’yicha)</td>
-                                <td className='Tretie'>17 002 750</td>
                             </tr>
                         </table>
                         <table>
