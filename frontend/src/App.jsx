@@ -59,6 +59,7 @@ function App() {
             <Route path='/ochiq-malumot/:id' element={<OchMalumot/>} />
             <Route path='/talaba/:id' element={<Talabalarga/>} />
             <Route path='/rektorat/:id' element={<Rektorat/>} />
+            <Route path='/xalqaro-hamkor-tashkilotlar/:id' element={<Fhamkor/>}/>
           </Routes>
           <Footer />
         </Router>

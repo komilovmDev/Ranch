@@ -37,3 +37,18 @@
     padding: 0;
     margin: 0;
 }
+
+@media screen and (max-width:768px) {
+    .MarkazContainer {
+        width: 90vw;
+    }
+    .MarkazTitle p {
+        font-size: 3vw;
+    }
+    .MarkazTitle strong {
+        font-size: 4.5vw;
+    }
+    .MarkazTitle h4 {
+        font-size: 4.5vw;
+    }
+}
