@@ -2,7 +2,8 @@ import './Burger.scss';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link, NavLink } from 'react-router-dom';
-import { CiMenuBurger } from "react-icons/ci";
+import { RxHamburgerMenu } from "react-icons/rx";
+import Ranch from "./../../pages/University/Img/Ranch 1 copy 5.png"
 
 
 // Import statements...
@@ -15,11 +16,11 @@ const Burger = () => {
                     <nav>
                         <input type="checkbox" id="menu" name="menu" className="m-menu__checkbox" />
                         <div className="NavButton">
-                            <label className="m-menu__toggle" for="menu">
-                                <CiMenuBurger />
+                            <label id='ButtonOnangni' className="m-menu__toggle" for="menu">
+                            <RxHamburgerMenu />
                             </label>
                             <div className="imgRanch">
-                                
+                                <img src={Ranch} alt="" />
                             </div>
                         </div>
                         <label className="m-menu__overlay" for="menu"></label>
