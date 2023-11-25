@@ -41,7 +41,7 @@ export default function NewsPage() {
                     <AiOutlineRight className='Iconright' />
                     <Link className='NewsTitleLineText' to={'/News'}>Yangiliklar</Link>
                     <AiOutlineRight className='Iconright' />
-                    <p>{data.title}</p>
+                    <p>/ ichki</p>
                 </div>
 
                 <div className="NewsPageContant">

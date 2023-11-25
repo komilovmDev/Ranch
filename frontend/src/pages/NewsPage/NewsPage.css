@@ -60,3 +60,31 @@
     padding: 0;
     margin: 0;
 }
+
+
+@media screen and (max-width:768px) {
+    .NewsPageContainer {
+        width: 90vw;
+    }
+    .NewsTitleLine p {
+        font-size: 3vw;
+    }
+    .NewsPageContantTitle p {
+        width: 100%;
+        font-size: 4vw;
+    }
+    .NewsPageContantBoxImg  {
+        width: 100%;
+    }
+    .NewsPageContantBoxImg img {
+        width: 100%
+    }
+    .NewsPageContantBox {
+        width: 90vw;
+        flex-direction: column;
+    }
+    .NewsPageContantBoxText {
+        width: 100%;
+        font-size: 5vw;
+    }
+}
