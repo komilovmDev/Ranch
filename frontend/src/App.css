@@ -16,10 +16,14 @@ body,html {
 
 @media (max-width:768px) {
     .Burger {
-        display: flex;
+        display: flex; 
+        position: relative;
+        z-index: 2;
     }
+    .Routes {
+        margin-top: 20vw;
+    }
+     
 }
-
-
 
  

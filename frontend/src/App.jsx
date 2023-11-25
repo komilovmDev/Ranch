@@ -33,37 +33,39 @@ function App() {
           <div className="Burger">
             <Burger />
           </div>
-          <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/ommaviy-tadbirlar/:id' element={<News />} />
-            <Route path='/universitet33/:id' element={<News />} />
-            <Route path='/xalqoro-aloqalar/:id' element={<News />} />
-            <Route path='/yanglik-toliq/:id' element={<NewsPage />} />
-            <Route path='/:slug/:id' element={<Markaz />} />
-            <Route path='/:slug/:id' element={<Kafedra />} />
-            <Route path='/IchqiTartib' element={<Koidaich />} />
-            <Route path='/Odob' element={<OdobPage />} />
-            <Route path='/University/Nizom' element={<Nizom />} />
-            <Route path='/University/Universitet_haqida' element={<Uhaqida />} />
-            <Route path='/Faoliyat/Hamkor' element={<Fhamkor />} />
-            <Route path='/Faoliyat/Yoshlar' element={<Yoshlar />} />
-            <Route path='/Kunduzgi-talim-yonalishlari/:id' element={<Kunduzgi />} />
-            <Route path='/Abiturient/Sirtiq' element={<Kunduzgi />} />
-            <Route path='/Abiturient/Magistr' element={<Kunduzgi />} />
-            <Route path='/Abiturient/Ikkinchi' element={<Kunduzgi />} />
-            <Route path='/Abiturient/Qochirish' element={<Kunduzgi />} />
-            <Route path='/online-hujjat-topshirish/:id' element={<Zayavka />} />
-            <Route path='/galireryalar/:id' element={<Galereya />} />
-            <Route path='/ochiq-malumot/:id' element={<OchMalumot />} />
-            <Route path='/talaba/:id' element={<Talabalarga />} />
-            <Route path='/ochiq-malumot/:id' element={<OchMalumot/>} />
-            <Route path='/talaba/:id' element={<Talabalarga/>} />
-            <Route path='/rektorat/:id' element={<Rektorat/>} />
-            <Route path='/xalqaro-hamkor-tashkilotlar/:id' element={<Fhamkor/>}/>
-          </Routes>
+          <div className="Routes">
+            <Routes>
+              <Route path='/' element={<Home />} />
+              <Route path='/ommaviy-tadbirlar/:id' element={<News />} />
+              <Route path='/universitet33/:id' element={<News />} />
+              <Route path='/xalqoro-aloqalar/:id' element={<News />} />
+              <Route path='/yanglik-toliq/:id' element={<NewsPage />} />
+              <Route path='/:slug/:id' element={<Markaz />} />
+              <Route path='/:slug/:id' element={<Kafedra />} />
+              <Route path='/IchqiTartib' element={<Koidaich />} />
+              <Route path='/Odob' element={<OdobPage />} />
+              <Route path='/University/Nizom' element={<Nizom />} />
+              <Route path='/University/Universitet_haqida' element={<Uhaqida />} />
+              <Route path='/Faoliyat/Hamkor' element={<Fhamkor />} />
+              <Route path='/Faoliyat/Yoshlar' element={<Yoshlar />} />
+              <Route path='/Kunduzgi-talim-yonalishlari/:id' element={<Kunduzgi />} />
+              <Route path='/Abiturient/Sirtiq' element={<Kunduzgi />} />
+              <Route path='/Abiturient/Magistr' element={<Kunduzgi />} />
+              <Route path='/Abiturient/Ikkinchi' element={<Kunduzgi />} />
+              <Route path='/Abiturient/Qochirish' element={<Kunduzgi />} />
+              <Route path='/online-hujjat-topshirish/:id' element={<Zayavka />} />
+              <Route path='/galireryalar/:id' element={<Galereya />} />
+              <Route path='/ochiq-malumot/:id' element={<OchMalumot />} />
+              <Route path='/talaba/:id' element={<Talabalarga />} />
+              <Route path='/ochiq-malumot/:id' element={<OchMalumot />} />
+              <Route path='/talaba/:id' element={<Talabalarga />} />
+              <Route path='/rektorat/:id' element={<Rektorat />} />
+              <Route path='/xalqaro-hamkor-tashkilotlar/:id' element={<Fhamkor />} />
+            </Routes>
+          </div>
           <Footer />
         </Router>
-      </div>
+      </div >
     </>
   )
 }
