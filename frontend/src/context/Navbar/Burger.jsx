@@ -6,7 +6,8 @@ import { MdKeyboardArrowRight } from "react-icons/md"
 import logo from './../../pages/University/Img/Ranch 1 copy 5.png'
 import { useContext } from 'react';
 import { AppContext } from '../../context/AppContext';
-import { AiFillCaretLeft } from "react-icons/ai";
+import { IoArrowBackSharp } from "react-icons/io5";
+import Leng from '../Dropdwn/LengButton/Leng';
 
 const Burger = () => {
 
@@ -43,16 +44,16 @@ const Burger = () => {
                                     data.map(item => (
                                         <>
                                             <div id="wrapper">
-                                                <p><a className="button" href={`#popup1${item.id}`}>{lang == 'uz' ? item.name_uz : lang == 'ru' ? item.name_ru : item.name_en}<MdKeyboardArrowRight size={'24px'} /></a></p>
+                                                <p><a className="button" href={`#popup1${item.id}`}>{lang == 'uz' ? item.name_uz : lang == 'ru' ? item.name_ru : item.name_en}<MdKeyboardArrowRight size={'6vw'} color='#FF6400' /></a></p>
                                             </div>
                                             <div id={`popup1${item.id}`} className="overlay">
                                                 {
                                                     item.children.map(chilItem => (
                                                         <div className="popup">
-                                                            <a className="close" href="#*"><AiFillCaretLeft /></a>
+                                                            <a className="close" href="#*"><IoArrowBackSharp /></a>
                                                             <div className="content">
                                                                 <Link onClick={() => window.location.assign(`/${chilItem.slug}/${chilItem.id}`)}>
-                                                                    <h1>{lang == 'uz' ? chilItem.name_uz : lang == 'ru' ? chilItem.name_ru : chilItem.name_en}</h1>
+                                                                    <p>{lang == 'uz' ? chilItem.name_uz : lang == 'ru' ? chilItem.name_ru : chilItem.name_en}</p>
                                                                 </Link>
                                                             </div>
                                                             {/* {
@@ -72,6 +73,12 @@ const Burger = () => {
                                     ))
                                 }
                             </li >
+                            <div className="LinespanBut">
+                                <span className='LineSpan'></span>
+                                <div className="dropdownlang">
+                                    <Leng />
+                                </div>
+                            </div>
                         </ul>
                         <div id='logoUkm' className='logoUkm'>
                             <div className='GlavBtw'>
