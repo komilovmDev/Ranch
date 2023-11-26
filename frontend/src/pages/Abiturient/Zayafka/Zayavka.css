@@ -260,7 +260,7 @@ input[type='radio']:checked:after {
   outline: none;
   border: none;
   display: flex;
-  justify-content: ;
+  justify-content: center;
   align-items: flex-start;
   color: #777;
   border: 0.1vw solid #ff66002b;
@@ -349,4 +349,8 @@ input[type='radio']:checked:after {
   color: #FF6400;
   font-size: .9vw;
   font-weight: 600;
+}
+
+@media (max-width:768px) {
+  
 }
