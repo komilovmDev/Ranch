@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom';
 import { RiBankLine } from 'react-icons/ri';
 import { AiOutlineRight } from 'react-icons/ai';
 
+
+
 export default function Uhaqida() {
     return (
         <div className="Uhaqida">
