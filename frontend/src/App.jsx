@@ -20,6 +20,7 @@ import OchMalumot from './pages/Talabalar/OchMalumot/OchMalumot';
 import Talabalarga from './pages/Talabalar/Talabalar/Talabalar.jsx';
 import Burger from './context/Navbar/Burger.jsx';
 import Rektorat from './pages/University/Rektorat/Rektorat.jsx';
+import Qabultugadi from './pages/Abiturient/Zayafka/Qabultugadi/Qabultugadi.jsx';
 
 function App() {
 
@@ -53,7 +54,7 @@ function App() {
               <Route path='/sirtqi-talim-yonalishlari/:id' element={<Kunduzgi />} />
               <Route path='/magistratura-yonalishlari-va-qabul-kvotasi/:id' element={<Kunduzgi />} />
               <Route path='/Abiturient/Qochirish' element={<Kunduzgi />} />
-              <Route path='/online-hujjat-topshirish/:id' element={<Zayavka />} />
+              <Route path='/online-hujjat-topshirish/:id' element={<Qabultugadi/>} />
               <Route path='/galireryalar/:id' element={<Galereya />} />
               <Route path='/ochiq-malumot/:id' element={<OchMalumot />} />
               <Route path='/talaba/:id' element={<Talabalarga />} />
