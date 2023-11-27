@@ -34,15 +34,15 @@ export default function Footer() {
                                     <p>Ma’lumot</p>
                                 </div>
                                 <div className="FooterMalumotHref">
-                                    <Link><p>Universitet</p></Link>
-                                    <Link><p>Maqsadimiz</p></Link>
-                                    <Link><p>Faoliyat</p></Link>
-                                    <Link><p>Abiturient</p></Link>
-                                    <Link><p>Talabalar</p></Link>
+                                    <Link to={`/universtitet-haqida/5`}><p>Universitet</p></Link>
+                                    {/* <Link><p>Maqsadimiz</p></Link> */}
+                                    <Link to={`/yoshlar-bilan-ishlash-va-manaviy-marifiy-faoliyat/12`}><p>Faoliyat</p></Link>
+                                    <Link to={`/Kunduzgi-talim-yonalishlari/13`}><p>Abiturient</p></Link>
+                                    <Link to={`/talaba/34`}><p>Talabalar</p></Link>
                                     <Link><p>Talim</p></Link>
-                                    <Link><p>Rektor</p></Link>
-                                    <Link><p>Prorektorlar</p></Link>
-                                    <Link><p>Menejerlar</p></Link>
+                                    <Link to={`rektorat/24`}><p>Rektor</p></Link>
+                                    {/* <Link to={`rektorat/24`}><p>Prorektorlar</p></Link> */}
+                                    {/* <Link><p>Menejerlar</p></Link> */}
                                 </div>
                             </div>
                             <div className="FooterQabul">
